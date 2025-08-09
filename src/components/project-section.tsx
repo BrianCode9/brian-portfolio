@@ -5,7 +5,7 @@ import React from 'react';
 // can cover that up and then also have them link to DevPost
 const ProjectSection = () => {
   return (
-    <div className='bg-blue-500 p-20 flex justify-center '>
+    <div className='bg-white p-20 flex justify-center '>
       <div className='flex flex-col gap-20 text-black p-10 border-2'>
         <div className='flex justify-center border-2 text-4xl'>
           Projects

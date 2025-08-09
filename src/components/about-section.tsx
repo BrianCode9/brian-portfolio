@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <div className='bg-blue-300 p-20 flex justify-center'>
+    <div className='bg-white p-20 flex justify-center'>
       <div className='flex flex-row gap-10'>
         <div className='border flex flex-col gap-10 border-2 p-10 w-200'>
           <div className='text-black text-4xl border-2'>
