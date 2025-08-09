@@ -8,7 +8,7 @@ const ProjectSection = () => {
     <div className='bg-blue-500 p-20 flex justify-center '>
       <div className='flex flex-col gap-20 text-black p-10 border-2'>
         <div className='flex justify-center border-2 text-4xl'>
-          My Work
+          Projects
         </div>
         <div className='flex grid grid-cols-4 grid-rows-1 gap-20 p-20'>
           <div className='border-2 p-20'>Hello</div>
