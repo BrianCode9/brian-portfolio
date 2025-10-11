@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from './button';
+import Link from 'next/link';
 
 
 // To fix the picture size issue add like a short description area at the bottom of the pictures that
@@ -16,8 +18,13 @@ const ProjectSection = () => {
           <div className='p-20 text-center border-2 bg-slate-200'>PCB</div>
           <div className='p-20 text-center border-2 bg-slate-200'>Personal Portfolio Website</div>
         </div>
+        <div className='flex justify-center'>
+          <Link href={"/projects"}>
+            <Button className='bg-orange-600 text-white'>More</Button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </div >
   );
 }
 
