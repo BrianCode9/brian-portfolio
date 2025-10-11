@@ -25,12 +25,12 @@ export function Sidebar() {
                     </SheetHeader>
 
                     <div className="flex flex-col space-y-6">
-                        <a href="#" className="hover:underline ml-8">Home</a>
-                        <a href="#" className="hover:underline ml-8">About</a>
-                        <a href="#" className="hover:underline ml-8">Projects</a>
-                        <a href="#" className="hover:underline ml-8">YT Channel</a>
-                        <a href="#" className="hover:underline ml-8">Contact</a>
-                        <a href="#" className="hover:underline ml-8">Resume</a>
+                        <a href="/" className="hover:underline ml-8">Home</a>
+                        <a href="#about" className="hover:underline ml-8">About</a>
+                        <a href="#projects" className="hover:underline ml-8">Projects</a>
+                        <a href="#youtube" className="hover:underline ml-8">YT Channel</a>
+                        <a href="#contact" className="hover:underline ml-8">Contact</a>
+                        <a href="/" className="hover:underline ml-8">Resume</a>
                     </div>
                 </SheetContent>
             </Sheet>

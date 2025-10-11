@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <div className='bg-white flex justify-center text-black'>
-      <div className='text-black w-600 flex justify-center bg-suit-teal pt-20 pb-20'>
+    <div className='bg-white flex justify-center text-black pt-20'>
+      <div className='text-black w-600 flex justify-center bg-suit-teal pt-20 pb-10'>
         <div className='flex flex-row gap-20'>
           <div className='flex flex-col gap-5 p-10 w-200'>
             <div className='text-white text-4xl underline decoration-orange-highlight'>

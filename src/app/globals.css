@@ -17,6 +17,10 @@
   --font-mozilla-headline: 'Mozilla Headline', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --color-theme-gray: #2e3636;
   --color-suit-teal: #193e52;

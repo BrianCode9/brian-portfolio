@@ -12,13 +12,27 @@ export default function Home() {
     <div className="min-h-cl flex flex-col">
       <NavBar />
       <main className="flex-1">
-        <HeroSection />
-        <AboutSection />
-        <ProjectSection />
-        <YouTubeSection />
-        <ContactSection />
+        <section id="hero">
+          <HeroSection />
+        </section>
+
+        <section id="about">
+          <AboutSection />
+        </section>
+
+        <section id="projects">
+          <ProjectSection />
+        </section>
+
+        <section id="youtube">
+          <YouTubeSection />
+        </section>
+
+        <section id="contact">
+          <ContactSection />
+        </section>
       </main>
       <Footer />
-    </div>
+    </div >
   );
 }
