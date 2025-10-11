@@ -14,7 +14,10 @@ const Footer = () => {
           <a href="#projects">Projects</a>
           <a href="#youtube">Channel</a>
           <a href="#contact">Contact</a>
-          <a href="/">Resume</a>
+          <Link href="/brian_ngo_software.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </Link>
+
           <Link href="https://www.linkedin.com/in/brianngo9/" target="_blank" rel="noopener noreferrer">
             <SiLinkedin size={25} />
           </Link>
