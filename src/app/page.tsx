@@ -1,11 +1,10 @@
-import NavBar from "@/components/navbar";
-import HeroSection from "@/components/hero-section";
-import AboutSection from "@/components/about-section";
-import ProjectSection from "@/components/project-section";
-import YouTubeSection from "@/components/youtube-section";
-import ContactSection from "@/components/contact-section";
-import Footer from "@/components/footer";
-
+import NavBar from "@/components/ui/navbar";
+import HeroSection from "@/components/ui/hero-section";
+import AboutSection from "@/components/ui/about-section";
+import ProjectSection from "@/components/ui/project-section";
+import YouTubeSection from "@/components/ui/youtube-section";
+import ContactSection from "@/components/ui/contact-section";
+import Footer from "@/components/ui/footer";
 
 export default function Home() {
   return (
