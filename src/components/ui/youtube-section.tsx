@@ -6,7 +6,7 @@ const YouTubeSection = () => {
       <div className='text-black w-600 flex justify-center bg-slate-300 pt-20 pb-20'>
         <div className='flex flex-row gap-10'>
           <div className='flex flex-col p-10 w-150 gap-10 text-black'>
-            <div className='text-6xl'>Vietlastica</div>
+            <div className='text-6xl underline decoration-orange-highlight'>Vietlastica</div>
             <div className='h-full'>This is my YouTube channel where I like posting videos about trips, personal projects, and educational videos.</div>
           </div>
           <div className='p-10 w-150 text-black'>

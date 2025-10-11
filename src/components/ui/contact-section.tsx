@@ -7,14 +7,18 @@ const ContactSection = () => {
   return (
     <div className='bg-white p-20 flex justify-center'>
       <div className='flex flex-col gap-10 text-black'>
-        <div className='text-5xl'>Want to React Out?</div>
-        <div className='flex flex-row gap-10'>
-          <div className='border-2 p-10 w-150 gap-5'>
+        <div className='text-5xl underline decoration-orange-highlight'>Want to React Out?</div>
+        <div className='flex flex-row gap-10 bg-suit-teal text-white rounded-lg'>
+          <div className='p-10 w-150 gap-5 text-white'>
             <div className='grid grid-cols-2 gap-5 h-10'>
-              <div className='flex border p-1 items-center'>Name</div>
               <Input className='col-span-1' placeholder='Name' />
+              <Input className='col-span-1' placeholder='Email' />
             </div>
-            <div className='flex border p-1 h-50 mt-5'>Messasge</div>
+            <textarea
+              className="col-span-1 h-50 w-full border rounded-md p-2 align-top"
+              placeholder="Message"
+            />
+            <Button className='bg-orange-600 hover:bg-orange-700 text-white font-medium px-4 py-2 rounded-md transition-colors duration-200 mt-2'>Send Message</Button>
           </div>
         </div>
       </div>
