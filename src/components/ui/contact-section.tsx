@@ -15,7 +15,7 @@ const ContactSection = () => {
               <Input className='col-span-1' placeholder='Email' />
             </div>
             <textarea
-              className="col-span-1 h-50 w-full border rounded-md p-2 align-top"
+              className="col-span-1 min-h-16 max-h-64 w-full border rounded-md p-2 align-top"
               placeholder="Message"
             />
             <Button className='bg-orange-600 hover:bg-orange-700 text-white font-medium px-4 py-2 rounded-md transition-colors duration-200 mt-2'>Send Message</Button>

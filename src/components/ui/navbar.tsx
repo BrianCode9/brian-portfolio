@@ -1,4 +1,5 @@
 import React from 'react';
+import { Sidebar } from './sidebar';
 
 const NavBar = () => {
   return (
@@ -12,6 +13,7 @@ const NavBar = () => {
           <a href="">Contact</a>
           <a href="">Resume</a>
         </div>
+        <Sidebar></Sidebar>
       </div>
 
     </nav >

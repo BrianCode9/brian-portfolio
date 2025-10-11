@@ -1,4 +1,5 @@
 import NavBar from "@/components/ui/navbar";
+import { Sidebar } from "@/components/ui/sidebar";
 import HeroSection from "@/components/ui/hero-section";
 import AboutSection from "@/components/ui/about-section";
 import ProjectSection from "@/components/ui/project-section";
