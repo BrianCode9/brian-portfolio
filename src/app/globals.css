@@ -6,14 +6,26 @@
 
 }
 
+@font-face {
+  font-family: 'Mozilla Headline';
+  src: url('/fonts/MozillaHeadline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-mozilla-headline: 'Mozilla Headline', sans-serif;
+}
+
 @theme inline {
   --color-theme-gray: #2e3636;
   --color-suit-teal: #193e52;
+  --color-orange-highlight: #FF5733;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
+  --font-display: var(--font-mozilla-headline);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,5 +38,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto-condensed), Arial, Helvetica, sans-serif;
 }

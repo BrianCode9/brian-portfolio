@@ -2,19 +2,23 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <div className='bg-white p-20 flex justify-center'>
-      <div className='flex flex-row gap-10'>
-        <div className='border flex flex-col gap-10 border-2 p-10 w-200'>
-          <div className='text-black text-4xl border-2'>
-            About Me
+    <div className='bg-white flex justify-center text-black'>
+      <div className='text-black w-600 flex justify-center bg-suit-teal pt-20 pb-20'>
+        <div className='flex flex-row gap-20'>
+          <div className='flex flex-col gap-5 p-10 w-200'>
+            <div className='text-white text-4xl'>
+              About Me
+            </div>
+            <div className='text-white text-xl h-full '>
+              I'm Brian Ngo, a Computer Engineering and Computer Science student at West Virginia University.
+              Currently, I'm working as a Software Development Intern at Agile5 Technologies focusing on full-stack development, using
+              languages and technologies: TypeScript, JavaScript, Python, HTML, Tailwind CSS, Next.js, React, ShadCN, SQL, and Databricks.
+            </div>
           </div>
-          <div className='text-black text-xl border-2 h-full'>
-            I'm a WVU student studying computer engineering and computer science.
-          </div>
-        </div>
-        <div className='flex justify-center border-2'>
-          <div className='w-80 h-80 rounded-full border-2 overflow-hidden'>
-            <img src="NgoBucklews.jpg" alt="Profile" />
+          <div className='flex justify-center'>
+            <div className='w-90 h-90 rounded-full overflow-hidden'>
+              <img src="NgoBucklews.jpg" alt="Profile" />
+            </div>
           </div>
         </div>
       </div>

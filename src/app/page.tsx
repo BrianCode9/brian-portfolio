@@ -11,14 +11,12 @@ export default function Home() {
   return (
     <div className="min-h-cl flex flex-col">
       <NavBar />
-
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
         <ProjectSection />
         <YouTubeSection />
         <ContactSection />
-
       </main>
       <Footer />
     </div>
