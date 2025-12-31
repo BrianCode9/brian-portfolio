@@ -1,7 +1,10 @@
+'use client'
+
 import React from 'react';
 import Link from 'next/link';
 import { SiYoutube } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
+import AnimatedLink from "@/components/ui/animatedlink"
 
 
 const NavBar = () => {
@@ -9,14 +12,14 @@ const NavBar = () => {
     <nav className='w-full h-16 p-4 bg-white text-black border'>
       <div className='flex items-center justify-between'>
         <div className='flex space-x-10 text-lg items-center'>
-          <a href="/">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#youtube">Channel</a>
-          <a href="#contact">Contact</a>
-          <Link href="/brian_ngo_software.pdf" target="_blank" rel="noopener noreferrer">
+          <AnimatedLink href="/">Home</AnimatedLink>
+          <AnimatedLink href="#about">About</AnimatedLink>
+          <AnimatedLink href="#projects">Projects</AnimatedLink>
+          <AnimatedLink href="#youtube">Channel</AnimatedLink>
+          <AnimatedLink href="#contact">Contact</AnimatedLink>
+          <AnimatedLink href="/brian_ngo_software.pdf">
             Resume
-          </Link>
+          </AnimatedLink>
 
           <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">
             <SiYoutube size={25} />
