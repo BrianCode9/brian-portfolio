@@ -13,10 +13,10 @@ const ProjectSection = () => {
           Featured Projects
         </div>
         <div className='flex grid grid-cols-4 grid-rows-1 gap-20 p-10 text-xl'>
-          <div className='p-20 text-center border-2 bg-slate-200'>Basic 8-Bit CPU</div>
-          <div className='p-20 text-center border-2 bg-slate-200'>6502 computer</div>
-          <div className='p-20 text-center border-2 bg-slate-200'>Keyboard PCB</div>
-          <div className='p-20 text-center border-2 bg-slate-200'>Software Project</div>
+          <div className='p-20 text-center border-2 bg-suit-teal rounded-sm text-white'>Basic 8-Bit CPU</div>
+          <div className='p-20 text-center border-2 bg-suit-teal rounded-sm text-white'>6502 computer</div>
+          <div className='p-20 text-center border-2 bg-suit-teal rounded-sm text-white'>Keyboard PCB</div>
+          <div className='p-20 text-center border-2 bg-suit-teal rounded-sm text-white'>Software Project</div>
         </div>
         <div className='flex justify-center'>
           <Link href={"/projects"}>

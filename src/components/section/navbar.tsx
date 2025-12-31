@@ -1,5 +1,4 @@
 import React from 'react';
-import { Sidebar } from "@/components/ui/sidebar";
 import Link from 'next/link';
 import { SiYoutube } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
