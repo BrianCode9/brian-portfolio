@@ -6,7 +6,7 @@ import { SiGithub } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <div className='bg-white sticky text-black h-16 p-5 flex justify-center border'>
+    <div className='bg-white sticky text-black h-16 p-5 border'>
       <div className='flex flex-col justify-center'>
         <div className='flex space-x-10 text-md items-center'>
           <a href="/">Home</a>
@@ -16,10 +16,6 @@ const Footer = () => {
           <a href="#contact">Contact</a>
           <Link href="/brian_ngo_software.pdf" target="_blank" rel="noopener noreferrer">
             Resume
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/brianngo9/" target="_blank" rel="noopener noreferrer">
-            <SiLinkedin size={25} />
           </Link>
 
           <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">

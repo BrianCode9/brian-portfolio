@@ -1,7 +1,6 @@
 import React from 'react';
-import { Sidebar } from './sidebar';
+import { Sidebar } from "@/components/ui/sidebar";
 import Link from 'next/link';
-import { SiLinkedin } from "react-icons/si";
 import { SiYoutube } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 
@@ -18,9 +17,6 @@ const NavBar = () => {
           <a href="#contact">Contact</a>
           <Link href="/brian_ngo_software.pdf" target="_blank" rel="noopener noreferrer">
             Resume
-          </Link>
-          <Link href="https://www.linkedin.com/in/brianngo9/" target="_blank" rel="noopener noreferrer">
-            <SiLinkedin size={25} />
           </Link>
 
           <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">

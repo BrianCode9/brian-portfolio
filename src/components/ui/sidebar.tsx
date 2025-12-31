@@ -24,7 +24,7 @@ export function Sidebar() {
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild className="bg-white">
                     <Button >
-                        <RxHamburgerMenu />
+                        <RxHamburgerMenu size={100} />
                     </Button>
                 </SheetTrigger>
                 <SheetContent className="transition-all duration-500 ease-in-out transform data-[state=open]:translate-x-0 data-[state=closed]:-translate-x-full bg-suit-teal" side="left">
@@ -41,9 +41,6 @@ export function Sidebar() {
                     </div>
                     <SheetFooter>
                         <div className="flex flex-row space-x-6 mt-4 pt-10">
-                            <Link href="https://www.linkedin.com/in/brianngo9/" target="_blank" rel="noopener noreferrer">
-                                <SiLinkedin size={30} />
-                            </Link>
 
                             <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">
                                 <SiYoutube size={30} />

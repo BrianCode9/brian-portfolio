@@ -11,10 +11,9 @@ const AboutSection = () => {
             </div>
             <div className='text-white text-xl h-full '>
               I'm Brian Ngo, a Computer Engineering and Computer Science student at West Virginia University.
-              Currently, I'm working as a Software Development Intern at Agile5 Technologies focusing on full-stack development, using
-              languages and technologies: TypeScript, JavaScript, Python, HTML, Tailwind CSS, Next.js, React, ShadCN, SQL, and Databricks.
+              Currently, I'm working as a Software Development Intern at Agile5 Technologies focusing on full-stack development.
 
-              In my free time, I enjoy starting cool projects, making YouTube videos, and traveling.
+              In my free time, I enjoy starting cool computer projects, making YouTube videos about them, and traveling.
             </div>
           </div>
           <div className='flex justify-center'>

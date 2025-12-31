@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 
@@ -10,13 +10,13 @@ const ProjectSection = () => {
     <div className='bg-white p-20 flex justify-center '>
       <div className='flex flex-col gap-20 text-black p-10'>
         <div className='flex justify-center text-5xl underline decoration-orange-highlight'>
-          Projects I'm Working On
+          Featured Projects
         </div>
         <div className='flex grid grid-cols-4 grid-rows-1 gap-20 p-10 text-xl'>
-          <div className='p-20 text-center border-2 bg-slate-200'>Automated Server Provisioner</div>
+          <div className='p-20 text-center border-2 bg-slate-200'>Basic 8-Bit CPU</div>
           <div className='p-20 text-center border-2 bg-slate-200'>6502 computer</div>
-          <div className='p-20 text-center border-2 bg-slate-200'>PCB</div>
-          <div className='p-20 text-center border-2 bg-slate-200'>Personal Portfolio Website</div>
+          <div className='p-20 text-center border-2 bg-slate-200'>Keyboard PCB</div>
+          <div className='p-20 text-center border-2 bg-slate-200'>Software Project</div>
         </div>
         <div className='flex justify-center'>
           <Link href={"/projects"}>
