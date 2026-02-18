@@ -10,10 +10,10 @@ const AboutSection = () => {
               About Me
             </div>
             <div className='text-white text-xl h-full '>
-              I'm Brian Ngo, a Computer Engineering and Computer Science student at West Virginia University.
-              Currently, I'm working as a Software Development Intern at Agile5 Technologies focusing on full-stack development.
+              I'm Brian Ngo, a electrical and computer engineering student at West Virginia University.
+              Currently, I'm a Software Development Intern at Agile5 Technologies doing full-stack enterprise development.
 
-              In my free time, I enjoy starting cool computer projects, making YouTube videos about them, and traveling.
+              In my free time, I enjoy starting projects, and traveling.
             </div>
           </div>
           <div className='flex justify-center'>

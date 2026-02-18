@@ -24,10 +24,6 @@ export default function Home() {
           <ProjectSection />
         </section>
 
-        <section id="youtube">
-          <YouTubeSection />
-        </section>
-
         <section id="contact">
           <ContactSection />
         </section>

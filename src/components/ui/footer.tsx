@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className='bg-white sticky text-black h-16 p-5'>
+    <div className='bg-slate-300 sticky text-black h-18 p-5'>
       <div className='flex flex-col justify-center'>
         <div className='flex space-x-10 text-md items-center justify-end'>
           <a href="#">

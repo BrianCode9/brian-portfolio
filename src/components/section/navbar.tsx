@@ -15,7 +15,7 @@ const NavBar = () => {
           <AnimatedLink href="/">Home</AnimatedLink>
           <AnimatedLink href="#about">About</AnimatedLink>
           <AnimatedLink href="#projects">Projects</AnimatedLink>
-          <AnimatedLink href="#youtube">Channel</AnimatedLink>
+          {/* <AnimatedLink href="#youtube">Channel</AnimatedLink> */}
           <AnimatedLink href="#contact">Contact</AnimatedLink>
           <AnimatedLink href="/brian_ngo_software.pdf">
             Resume

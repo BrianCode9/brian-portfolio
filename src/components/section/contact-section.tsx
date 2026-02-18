@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactSection = () => {
   return (
-    <div className='bg-white p-20 flex justify-center'>
+    <div className='bg-slate-300 p-20 flex justify-center'>
       <div className='flex flex-col gap-10 text-black'>
         <div className='text-5xl underline decoration-orange-highlight'>Want to React Out?</div>
         <div className='flex flex-row gap-10 bg-suit-teal text-white rounded-lg'>
