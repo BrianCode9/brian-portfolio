@@ -5,7 +5,6 @@ const HeroSection = () => {
     <div className='max-w-screen bg-white p-20 flex justify-center h-150 '>
       <div className='text-7xl flex flex-col text-black text-center space-y-10 justify-center underline decoration-orange-highlight'>
         <span>Hello, I'm Brian Ngo.</span>
-        <span>This is My Portfolio Website.</span>
       </div>
     </div>
   );

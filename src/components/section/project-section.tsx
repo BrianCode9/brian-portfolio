@@ -19,8 +19,7 @@ const ProjectSection = () => {
             className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
             aria-label="Open Vivado 8-Bit CPU project"
           >
-            <div className="text-xl font-semibold">Vivado 8-Bit CPU</div>
-            <div className="mt-4">Short Description</div>
+            <div className="text-xl font-semibold">Simple 8-bit CPU</div>
           </Link>
           <Link
             href="/projects/vivadocpu"
@@ -28,7 +27,6 @@ const ProjectSection = () => {
             aria-label="Open Vivado 8-Bit CPU project"
           >
             <div className="text-xl font-semibold">W65C02S Computer</div>
-            <div className="mt-4">Short Description</div>
           </Link>
           <Link
             href="/projects/vivadocpu"
@@ -36,12 +34,11 @@ const ProjectSection = () => {
             aria-label="Open Vivado 8-Bit CPU project"
           >
             <div className="text-xl font-semibold">Custom Keyboard PCB</div>
-            <div className="mt-4">Short Description</div>
           </Link>
         </div>
         <div className='flex justify-center'>
           <Link href={"/projects"}>
-            <Button className='bg-orange-600 text-white'>More</Button>
+            <Button className='bg-orange-600 text-white'>More Projects!</Button>
           </Link>
         </div>
       </div>

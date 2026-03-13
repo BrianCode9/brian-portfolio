@@ -9,7 +9,7 @@ import AnimatedLink from "@/components/ui/animatedlink"
 
 const NavBar = () => {
   return (
-    <nav className='w-full h-16 p-4 bg-white text-black border'>
+    <nav className='w-full h-16 p-4 bg-slate-300 text-black border'>
       <div className='flex items-center justify-between'>
         <div className='flex space-x-10 text-lg items-center'>
           <AnimatedLink href="/">Home</AnimatedLink>
@@ -17,20 +17,19 @@ const NavBar = () => {
           <AnimatedLink href="#projects">Projects</AnimatedLink>
           {/* <AnimatedLink href="#youtube">Channel</AnimatedLink> */}
           <AnimatedLink href="#contact">Contact</AnimatedLink>
-          <AnimatedLink href="/brian_ngo_software.pdf">
+          <AnimatedLink href="/brian_ngo_software.pdf" target='_blank' rel="noopener noreferrer">
             Resume
           </AnimatedLink>
 
-          <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">
+          {/* <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">
             <SiYoutube size={25} />
-          </Link>
+          </Link> */}
 
           <Link href="https://github.com/BrianCode9" target="_blank" rel="noopener noreferrer">
             <SiGithub size={25} />
           </Link>
         </div>
       </div>
-
     </nav >
   );
 }

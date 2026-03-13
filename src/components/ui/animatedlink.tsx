@@ -7,6 +7,8 @@ interface AnimatedLinkProps {
     duration?: number;
     color?: string;
     className?: string;
+    target?: string;
+    rel?: string;
 }
 
 const underlineVariants = (color: string | undefined, duration: number | undefined): Variants => ({
@@ -18,8 +20,9 @@ export default function AnimatedLink({
     href = "#",
     children,
     duration = 0.2,
-    color = "black",
     className = "",
+    target,
+    rel,
 }: AnimatedLinkProps) {
     const variants = underlineVariants("orange", duration);
 
@@ -31,6 +34,8 @@ export default function AnimatedLink({
             initial="rest"
             whileHover="hover"
             animate="rest"
+            {...(target && { target })}
+            {...(rel && { rel })}
         >
             {children}
             <motion.span
