@@ -1,38 +1,69 @@
 'use client'
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { SiYoutube } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
-import AnimatedLink from "@/components/ui/animatedlink"
+import { Menu, X } from "lucide-react";
+import AnimatedLink from "@/components/ui/animatedlink";
 
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/experiences", label: "Travel" },
+  { href: "/#contact", label: "Contact" },
+  { href: "/brian_ngo_most_updated.pdf", label: "Resume" },
+];
 
 const NavBar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <nav className='w-full h-16 p-4 bg-slate-300 text-black border'>
-      <div className='flex items-center justify-between'>
-        <div className='flex space-x-10 text-lg items-center'>
-          <AnimatedLink href="/">Home</AnimatedLink>
-          <AnimatedLink href="#about">About</AnimatedLink>
-          <AnimatedLink href="#projects">Projects</AnimatedLink>
-          {/* <AnimatedLink href="#youtube">Channel</AnimatedLink> */}
-          <AnimatedLink href="#contact">Contact</AnimatedLink>
-          <AnimatedLink href="/brian_ngo_software.pdf" target='_blank' rel="noopener noreferrer">
-            Resume
-          </AnimatedLink>
-
-          {/* <Link href="https://www.youtube.com/@vietlastica" target="_blank" rel="noopener noreferrer">
-            <SiYoutube size={25} />
-          </Link> */}
-
+    <nav className='w-full bg-white text-black border-b-2 border-suit-teal relative z-40'>
+      <div className='h-16 px-6 flex items-center justify-between'>
+        {/* Desktop */}
+        <div className='hidden md:flex space-x-8 text-lg items-center'>
+          {links.map(l => (
+            <AnimatedLink key={l.href} href={l.href}>{l.label}</AnimatedLink>
+          ))}
           <Link href="https://github.com/BrianCode9" target="_blank" rel="noopener noreferrer">
             <SiGithub size={25} />
           </Link>
         </div>
+
+        {/* Mobile: name + hamburger */}
+        <div className='flex md:hidden items-center justify-between w-full'>
+          <span className='font-bold text-lg'>Brian Ngo</span>
+          <button
+            onClick={() => setMobileOpen(prev => !prev)}
+            aria-label="Toggle menu"
+            className='p-1'
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
-    </nav >
+
+      {/* Mobile dropdown */}
+      {mobileOpen && (
+        <div className='md:hidden absolute top-16 left-0 right-0 bg-white border-t border-suit-teal z-50 flex flex-col px-6 py-4 space-y-5 text-lg shadow-lg'>
+          {links.map(l => (
+            <AnimatedLink key={l.href} href={l.href} onClick={() => setMobileOpen(false)}>
+              {l.label}
+            </AnimatedLink>
+          ))}
+          <Link
+            href="https://github.com/BrianCode9"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+          >
+            <SiGithub size={25} />
+          </Link>
+        </div>
+      )}
+    </nav>
   );
 }
 
 export default NavBar;
-
