@@ -1,132 +1,62 @@
 'use client'
 
-import Footer from "@/components/ui/footer";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { projects } from "@/data/projects";
+import NavBar from "@/components/section/navbar";
 
 export default function ProjectsPage() {
     return (
-        <main className="min-h-screen p-8 bg-white">
-            <h1 className="text-6xl font-bold mb-6 text-black underline decoration-orange-highlight">Projects</h1>
-            <div className="mx-auto text-black">
-                <div className='grid grid-cols-3 grid-rows-2 border text-xl gap-20 text-white'>
+        <main className="min-h-screen bg-white">
+            <NavBar />
+            <div className="max-w-5xl mx-auto px-6 py-12">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-2">
+                    Projects
+                </h1>
+                <div className="h-1 w-16 bg-orange-highlight mb-10" />
 
-                    <Link
-                        href="/projects/vivadocpu"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Vivado 8-Bit CPU project"
-                    >
-                        <div className="text-2xl font-semibold">Vivado 8-Bit CPU</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {projects.map((p, i) => (
+                        <motion.div
+                            key={p.slug}
+                            initial={{ opacity: 0, y: 24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.35, delay: i * 0.08 }}
+                            whileHover={{ y: -4 }}
+                        >
+                            <Link
+                                href={p.wip ? '/projects/wip' : `/projects/${p.slug}`}
+                                className="group relative flex flex-col h-full p-8 bg-white border-2 border-suit-teal rounded-sm shadow-sm hover:shadow-md transition-shadow"
+                                aria-label={`Open ${p.title} project`}
+                            >
+                                {p.wip && (
+                                    <span className="absolute top-4 right-4 text-xs bg-orange-highlight text-white px-2 py-0.5 rounded-full uppercase tracking-wide font-semibold">
+                                        Work in Progress
+                                    </span>
+                                )}
 
-                    <Link
-                        href="/projects/6502-computer"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open 6502 Computer project"
-                    >
-                        <div className="text-2xl font-semibold">W65C02S Computer</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
+                                <div className="flex-1">
+                                    <h2 className="text-xl md:text-2xl font-bold text-suit-teal mb-3 pr-12">
+                                        {p.title}
+                                    </h2>
+                                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                        {p.description}
+                                    </p>
+                                </div>
 
-                    <Link
-                        href="/projects/keyboard-pcb"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Keyboard PCB project"
-                    >
-                        <div className="text-2xl font-semibold">Keyboard PCB</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/clock-module"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Clock Module project"
-                    >
-                        <div className="text-2xl font-semibold">Clock Module</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-1"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 1"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 1</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-2"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 2"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 2</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-3"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 3"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 3</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-4"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 4"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 4</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-5"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 5"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 5</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-6"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 6"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 6</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-7"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 7"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 7</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-
-                    <Link
-                        href="/projects/software-project-8"
-                        className="block p-20 text-center bg-suit-teal rounded-sm text-white transition hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                        aria-label="Open Software Project 8"
-                    >
-                        <div className="text-2xl font-semibold">Software Project 8</div>
-                        <div className="mt-4">Short Description</div>
-                    </Link>
-                </div>
-
-                <div className='flex justify-end pt-10 '>
-                    <Link href={"/"}>
-                        <Button className='bg-orange-600 text-white size-sm'>Back</Button>
-                    </Link>
+                                <div className="mt-6 flex items-center text-sm font-semibold text-orange-highlight">
+                                    <span>{p.wip ? 'In progress' : 'View project'}</span>
+                                    <ArrowRight
+                                        size={15}
+                                        className="ml-1 group-hover:translate-x-1 transition-transform duration-200"
+                                    />
+                                </div>
+                            </Link>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </main>
-    )
+    );
 }

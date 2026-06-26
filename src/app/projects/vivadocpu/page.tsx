@@ -1,6 +1,7 @@
 // src/app/projects/<slug>/page.tsx
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import NavBar from "@/components/section/navbar";
+import AnimatedButton from "@/components/ui/animatedbutton";
 
 
 export const metadata = {
@@ -10,7 +11,7 @@ export const metadata = {
 type ImageItem = { src: string; alt: string };
 
 const project = {
-    title: "Design, Simulating, and PnR of 8-Bit CPU",
+    title: "Simple 8-Bit CPU",
     summary:
         "A short paragraph that describes the project, the problem it solves, and the target audience.",
     repoUrl: "https://github.com/you/project",
@@ -20,12 +21,14 @@ const project = {
 export default function ProjectPage() {
     return (
         <main className="bg-white text-black w-full min-h-screen text-xl">
+            <NavBar />
             <div className="max-w-6xl mx-auto px-6 py-12">
                 {/* HERO */}
                 <header className="mb-8">
-                    <h1 className="text-4xl md:text-6xl font-bold underline decoration-orange-highlight">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-2">
                         {project.title}
                     </h1>
+                    <div className="h-1 w-16 bg-orange-highlight" />
                 </header>
 
                 {/* SUMMARY & META */}
@@ -81,7 +84,7 @@ export default function ProjectPage() {
                         )}
                     </div>
                     <Link href={"/projects"}>
-                        <Button className='bg-orange-600 text-white'>Back</Button>
+                        <AnimatedButton variant="white">Back</AnimatedButton>
                     </Link>
                 </footer>
             </div>

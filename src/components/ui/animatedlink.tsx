@@ -9,6 +9,7 @@ interface AnimatedLinkProps {
     className?: string;
     target?: string;
     rel?: string;
+    onClick?: () => void;
 }
 
 const underlineVariants = (color: string | undefined, duration: number | undefined): Variants => ({
@@ -23,6 +24,7 @@ export default function AnimatedLink({
     className = "",
     target,
     rel,
+    onClick,
 }: AnimatedLinkProps) {
     const variants = underlineVariants("orange", duration);
 
@@ -34,6 +36,7 @@ export default function AnimatedLink({
             initial="rest"
             whileHover="hover"
             animate="rest"
+            onClick={onClick}
             {...(target && { target })}
             {...(rel && { rel })}
         >

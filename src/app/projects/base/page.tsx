@@ -1,6 +1,6 @@
 // src/app/projects/<slug>/page.tsx
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import AnimatedButton from "@/components/ui/animatedbutton";
 
 
 export const metadata = {
@@ -23,9 +23,10 @@ export default function ProjectPage() {
             <div className="max-w-6xl mx-auto px-6 py-12">
                 {/* HERO */}
                 <header className="mb-8">
-                    <h1 className="text-4xl md:text-6xl font-bold underline decoration-orange-highlight">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-2">
                         {project.title}
                     </h1>
+                    <div className="h-1 w-16 bg-orange-highlight" />
                 </header>
 
                 {/* SUMMARY & META */}
@@ -81,7 +82,7 @@ export default function ProjectPage() {
                         )}
                     </div>
                     <Link href={"/projects"}>
-                        <Button className='bg-orange-600 text-white'>Back</Button>
+                        <AnimatedButton variant="white">Back</AnimatedButton>
                     </Link>
                 </footer>
             </div>
