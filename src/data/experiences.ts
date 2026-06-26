@@ -1,13 +1,40 @@
+export interface ExperienceSection {
+  title: string;
+  content: string;
+}
+
 export interface Experience {
   title: string;
   slug: string;
   location: string;
   date: string;
-  coverPhoto?: string; // path relative to /public
-  summary: string;    // short preview text for the card
-  body: string[];     // paragraphs for the detail page
-  photos?: string[];  // additional photos for the gallery
+  coverPhoto?: string;
+  summary: string;
+  body: string[];
+  photos?: string[];
+  status?: "planning";
+  icon?: string;
+  sections?: ExperienceSection[];
 }
+
+const PLACEHOLDER_SECTIONS: ExperienceSection[] = [
+  {
+    title: "Getting There",
+    content: "Write about how you got there — the drive, flight, or road trip.",
+  },
+  {
+    title: "Highlights",
+    content: "Write about the best moments and things you did.",
+  },
+  {
+    title: "Food & Drink",
+    content: "Write about the best meals, local spots, and anything worth recommending.",
+  },
+  {
+    title: "Takeaways",
+    content: "Write about what you took away from the trip and whether you'd go back.",
+  },
+];
 
 export const experiences: Experience[] = [
   {
@@ -17,33 +44,34 @@ export const experiences: Experience[] = [
     date: "",
     coverPhoto: "",
     summary: "Hiking the Beehive Trail, exploring Sand Beach, and taking in the Asticou Azalea Garden on Mount Desert Island.",
-    body: [
-      "Write about your Acadia trip here.",
-    ],
+    body: [],
     photos: [],
-  },
-  {
-    title: "Ho Chi Minh City",
-    slug: "vietnam",
-    location: "Saigon, Vietnam",
-    date: "",
-    coverPhoto: "",
-    summary: "Exploring my family's home country — the food, the streets, and the culture of Saigon.",
-    body: [
-      "Write about your Vietnam trip here.",
-    ],
-    photos: [],
+    icon: "🌲",
+    sections: PLACEHOLDER_SECTIONS,
   },
   {
     title: "Toronto & Niagara Falls",
     slug: "toronto",
-    location: "Ontario, Canada",
+    location: "Canada",
     date: "",
     coverPhoto: "",
     summary: "A trip across the border to Toronto and the Falls.",
-    body: [
-      "Write about your Toronto and Niagara Falls trip here.",
-    ],
+    body: [],
     photos: [],
+    icon: "🍁",
+    sections: PLACEHOLDER_SECTIONS,
+  },
+  {
+    title: "Roanoke",
+    slug: "roanoke",
+    location: "Roanoke, Virginia",
+    date: "",
+    coverPhoto: "",
+    summary: "Planning a trip to explore the Blue Ridge Mountains, the Roanoke Star, and the local food scene.",
+    body: [],
+    photos: [],
+    status: "planning",
+    icon: "⭐",
+    sections: PLACEHOLDER_SECTIONS,
   },
 ];

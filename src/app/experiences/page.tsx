@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import NavBar from '@/components/section/navbar';
-import AnimatedButton from '@/components/ui/animatedbutton';
 import { experiences } from '@/data/experiences';
 
 export default function ExperiencesPage() {
@@ -18,8 +17,14 @@ export default function ExperiencesPage() {
             <Link
               key={exp.slug}
               href={`/experiences/${exp.slug}`}
-              className="group flex flex-col rounded-sm overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              className="group relative flex flex-col rounded-sm overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
             >
+              {exp.status === "planning" && (
+                <span className="absolute top-3 right-3 z-10 text-xs bg-orange-highlight text-white px-2 py-0.5 rounded-full uppercase tracking-wide font-semibold">
+                  Planning
+                </span>
+              )}
+
               {/* Cover photo or placeholder */}
               <div className="h-52 bg-suit-teal overflow-hidden">
                 {exp.coverPhoto ? (
@@ -52,11 +57,6 @@ export default function ExperiencesPage() {
           ))}
         </div>
 
-        <div className="flex justify-end pt-12">
-          <Link href="/">
-            <AnimatedButton variant="white">Back</AnimatedButton>
-          </Link>
-        </div>
       </div>
     </main>
   );

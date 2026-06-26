@@ -43,11 +43,26 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         </div>
 
         {/* Body */}
-        <div className="space-y-5 text-lg leading-relaxed text-gray-800">
-          {exp.body.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
+        {exp.body.length > 0 && (
+          <div className="space-y-5 text-lg leading-relaxed text-gray-800">
+            {exp.body.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        )}
+
+        {/* Sections */}
+        {exp.sections && exp.sections.length > 0 && (
+          <div className="space-y-10 mt-8">
+            {exp.sections.map((section, i) => (
+              <div key={i}>
+                <h2 className="text-2xl font-bold mb-2">{section.title}</h2>
+                <div className="h-1 w-10 bg-orange-highlight mb-4" />
+                <p className="text-lg leading-relaxed text-gray-600">{section.content}</p>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Photo gallery */}
         {exp.photos && exp.photos.length > 0 && (

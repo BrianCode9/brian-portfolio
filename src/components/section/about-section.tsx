@@ -9,10 +9,12 @@ const AboutSection = () => {
         <div className='max-w-7xl mx-auto px-8 md:px-16'>
           <div className='flex flex-col md:flex-row gap-10 md:gap-20 items-center'>
             <div className='flex flex-col gap-5 flex-1'>
-              <div className='text-white text-3xl md:text-4xl font-bold mb-1'>
-                About Me
+              <div>
+                <div className='text-white text-3xl md:text-4xl font-bold mb-2'>
+                  About Me
+                </div>
+                <div className='h-1 w-12 bg-orange-highlight' />
               </div>
-              <div className='h-1 w-12 bg-orange-highlight' />
               <div className='text-white text-lg md:text-xl space-y-4'>
                 <p>I'm Brian Ngo, an electrical and computer engineering student at West Virginia University.
                   Currently, I'm a Software Development Intern at Agile5 Technologies doing full-stack enterprise development.

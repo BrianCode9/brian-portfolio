@@ -1,6 +1,8 @@
 'use client'
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import NavBar from "@/components/section/navbar";
+import AnimatedButton from "@/components/ui/animatedbutton";
 
 const TravelMap = dynamic(() => import("@/components/ui/TravelMap"), { ssr: false });
 
@@ -64,8 +66,13 @@ export default function AboutPage() {
                         </p>
                     </div>
                 </div>
-                <div className="w-full max-w-6xl mx-auto px-6 pb-10">
+                <div className="w-full max-w-6xl mx-auto px-6 pb-6">
                     <TravelMap />
+                </div>
+                <div className="flex justify-center pb-12">
+                    <Link href="/experiences">
+                        <AnimatedButton variant="teal">Curious about my travels? Go deeper.</AnimatedButton>
+                    </Link>
                 </div>
             </div>
         </main>
