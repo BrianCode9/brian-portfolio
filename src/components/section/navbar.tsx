@@ -12,7 +12,7 @@ const links = [
   { href: "/projects", label: "Projects" },
   { href: "/experiences", label: "Travel" },
   { href: "/#contact", label: "Contact" },
-  { href: "/brian_ngo_most_updated.pdf", label: "Resume" },
+  { href: "/documents/brian_ngo_most_updated.pdf", label: "Resume" },
 ];
 
 const NavBar = () => {
@@ -33,7 +33,7 @@ const NavBar = () => {
 
         {/* Mobile: name + hamburger */}
         <div className='flex md:hidden items-center justify-between w-full'>
-          <span className='font-bold text-lg'>Brian Ngo</span>
+          <span className='font-bold text-lg'>Ngo</span>
           <button
             onClick={() => setMobileOpen(prev => !prev)}
             aria-label="Toggle menu"

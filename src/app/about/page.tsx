@@ -17,7 +17,7 @@ export default function AboutPage() {
                     <div className='flex flex-col md:flex-row gap-6 md:gap-10 text-lg md:text-xl'>
                         <img
                             className="w-full md:w-56 lg:w-72 h-auto object-cover border-2 self-start"
-                            src="cmu.JPG"
+                            src="/images/profile/cmu.JPG"
                             alt="Profile"
                         />
                         <div className="flex flex-col gap-6">

@@ -28,7 +28,7 @@ const AboutSection = () => {
             </div>
             <div className='flex justify-center shrink-0'>
               <div className='w-56 h-56 md:w-80 md:h-80 lg:w-90 lg:h-90 rounded-full overflow-hidden'>
-                <img src="NgoBucklews.jpg" alt="Profile" className='w-full h-full object-cover object-top' />
+                <img src="/images/profile/NgoBucklews.jpg" alt="Profile" className='w-full h-full object-cover object-top' />
               </div>
             </div>
           </div>
