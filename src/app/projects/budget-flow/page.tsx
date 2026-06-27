@@ -8,7 +8,7 @@ export const metadata = {
 
 const project = {
     title: "Budget Flow",
-    repoUrl: "",
+    repoUrl: "https://github.com/BrianCode9/tartanhacks",
 };
 
 export default function ProjectPage() {
