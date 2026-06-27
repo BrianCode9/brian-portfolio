@@ -17,7 +17,10 @@ export default function ProjectsPage() {
                 <div className="h-1 w-16 bg-orange-highlight mb-10" />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {projects.map((p, i) => (
+                    {[...projects].sort((a, b) => {
+                        if (a.wip !== b.wip) return Number(b.wip) - Number(a.wip);
+                        return (b.date ?? "").localeCompare(a.date ?? "");
+                    }).map((p, i) => (
                         <motion.div
                             key={p.slug}
                             initial={{ opacity: 0, y: 24 }}

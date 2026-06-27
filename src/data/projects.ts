@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   featured?: boolean;
   wip?: boolean;
+  date?: string; // "YYYY-MM" — used for sorting only, not displayed
 }
 
 export const projects: Project[] = [
@@ -13,6 +14,7 @@ export const projects: Project[] = [
     description: "Budget tracking web app built at TartanHacks @ CMU",
     featured: true,
     wip: false,
+    date: "2026-02",
   },
   {
     title: "Backyard Blackjack",
@@ -20,13 +22,15 @@ export const projects: Project[] = [
     description: "Blackjack game built at SteelHacks",
     featured: true,
     wip: false,
+    date: "2024-10",
   },
   {
     title: "Simple 8-Bit CPU",
-    slug: "vivadocpu",
+    slug: "simple-cpu",
     description: "Design, simulation, and place & route of an 8-bit CPU on a DE10-Lite FPGA",
     featured: false,
     wip: false,
+    date: "2025-12",
   },
   {
     title: "Custom Keyboard PCB",
@@ -41,5 +45,21 @@ export const projects: Project[] = [
     description: "A complete 6502-based computer built from discrete components",
     featured: false,
     wip: true,
+  },
+  {
+    title: "Personal Website",
+    slug: "base",
+    description: "This portfolio — built with Next.js, TypeScript, and Tailwind CSS",
+    featured: false,
+    wip: false,
+    date: "2025-06",
+  },
+  {
+    title: "CMOS Inverter & Logic Circuit Design",
+    slug: "cmos-inverter",
+    description: "Simulated a CMOS inverter and designed a multi-transistor logic circuit implementing A+BC",
+    featured: false,
+    wip: false,
+    date: "2026-04",
   },
 ];
