@@ -40,7 +40,6 @@ export const travelPlaces: TravelPlace[] = [
   { name: "University of Delaware",   lat: 39.6809151, lng: -75.7523313, category: 'hackathon', description: "HenHacks" },
   { name: "The Ohio State University",lat: 40.0060889, lng: -83.0282624, category: 'hackathon', description: "HackOHI/O" },
   { name: "University of Pittsburgh", lat: 40.4444842, lng: -79.9612831, category: 'hackathon', description: "SteelHacks" },
-  { name: "Roanoke, VA",             lat: 37.2709116, lng: -79.9449495, category: 'hackathon' },
 
   // Travel
   { name: "Philadelphia, PA",         lat: 39.9526,    lng: -75.1652,    category: 'travel' },

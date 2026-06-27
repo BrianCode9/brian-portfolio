@@ -61,17 +61,4 @@ export const experiences: Experience[] = [
     icon: "🍁",
     sections: PLACEHOLDER_SECTIONS,
   },
-  {
-    title: "Roanoke",
-    slug: "roanoke",
-    location: "Roanoke, Virginia",
-    date: "",
-    coverPhoto: "",
-    summary: "Planning a trip to explore the Blue Ridge Mountains, the Roanoke Star, and the local food scene.",
-    body: [],
-    photos: [],
-    status: "planning",
-    icon: "⭐",
-    sections: PLACEHOLDER_SECTIONS,
-  },
 ];
