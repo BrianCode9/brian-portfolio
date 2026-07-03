@@ -5,7 +5,7 @@ import AnimatedButton from '../ui/animatedbutton';
 const AboutSection = () => {
   return (
     <div className='bg-white pt-10 md:pt-20'>
-      <div className='bg-suit-teal py-10 md:py-20'>
+      <div className='bg-[#0a1f2b] py-10 md:py-20'>
         <div className='max-w-7xl mx-auto px-8 md:px-16'>
           <div className='flex flex-col md:flex-row gap-10 md:gap-20 items-center'>
             <div className='flex flex-col gap-5 flex-1'>
