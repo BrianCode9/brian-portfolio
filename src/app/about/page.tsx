@@ -10,6 +10,7 @@ export default function AboutPage() {
     return (
         <main>
             <NavBar />
+            <div className="h-16" />
 
             {/* My Start Section */}
             <div className="bg-white">
@@ -71,7 +72,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex justify-center pb-12">
                     <Link href="/experiences">
-                        <AnimatedButton variant="teal">Curious about my travels? Go deeper.</AnimatedButton>
+                        <AnimatedButton variant="teal">Travel Page</AnimatedButton>
                     </Link>
                 </div>
             </div>

@@ -6,6 +6,7 @@ export default function ExperiencesPage() {
   return (
     <main className="min-h-screen bg-white">
       <NavBar />
+      <div className="h-16" />
       <div className="max-w-6xl mx-auto px-6 py-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-2 text-black">
           Travel

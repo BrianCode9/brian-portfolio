@@ -16,6 +16,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
   return (
     <main className="min-h-screen bg-white text-black">
       <NavBar />
+      <div className="h-16" />
 
       {/* Hero */}
       {exp.coverPhoto ? (

@@ -15,6 +15,7 @@ export default function ProjectPage() {
     return (
         <main className="bg-white text-black w-full min-h-screen">
             <NavBar />
+            <div className="h-16" />
             <div className="max-w-4xl mx-auto px-6 py-12">
                 <header className="mb-8">
                     <h1 className="text-4xl md:text-6xl font-bold mb-2">
