@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
 
@@ -15,6 +16,7 @@ export default function ProjectPage() {
     return (
         <main className="bg-white text-black w-full min-h-screen">
             <NavBar />
+            <div className="h-16" />
             <div className="max-w-4xl mx-auto px-6 py-12">
                 <header className="mb-8">
                     <h1 className="text-4xl md:text-6xl font-bold mb-2">
@@ -22,6 +24,18 @@ export default function ProjectPage() {
                     </h1>
                     <div className="h-1 w-16 bg-orange-highlight" />
                 </header>
+
+                <section className="mb-10">
+                    <div className="border border-gray-200 rounded overflow-hidden max-w-md">
+                        <Image
+                            src="/images/projects/USBportkeyboardproject.png"
+                            alt="Custom Keyboard PCB"
+                            width={800}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
+                </section>
 
                 <section className="mb-12">
                     <h2 className="text-2xl md:text-3xl font-semibold mb-3">Overview</h2>

@@ -20,25 +20,36 @@ const ProjectSection = () => {
             <Link
               key={p.slug}
               href={p.wip ? '/projects/wip' : `/projects/${p.slug}`}
-              className="group relative flex flex-col h-full p-8 bg-white border-2 border-suit-teal rounded-sm shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+              className="group relative flex flex-col h-full bg-white border-2 border-suit-teal rounded-sm overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200"
               aria-label={`Open ${p.title} project`}
             >
               {p.wip && (
-                <span className="absolute top-4 right-4 text-xs bg-orange-highlight text-white px-2 py-0.5 rounded-full uppercase tracking-wide font-semibold">
+                <span className="absolute top-4 right-4 z-10 text-xs bg-orange-highlight text-white px-2 py-0.5 rounded-full uppercase tracking-wide font-semibold">
                   Work in Progress
                 </span>
               )}
-              <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-suit-teal mb-3 pr-12">
-                  {p.title}
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  {p.description}
-                </p>
-              </div>
-              <div className="mt-6 flex items-center text-sm font-semibold text-orange-highlight">
-                <span>{p.wip ? 'In progress' : 'View project'}</span>
-                <ArrowRight size={15} className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
+              {p.image && (
+                <div className="h-40 w-full overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div className="flex flex-col flex-1 p-8">
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-bold text-suit-teal mb-3">
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    {p.description}
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center text-sm font-semibold text-orange-highlight">
+                  <span>{p.wip ? 'In progress' : 'View project'}</span>
+                  <ArrowRight size={15} className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
               </div>
             </Link>
           ))}

@@ -5,6 +5,7 @@ export interface Project {
   featured?: boolean;
   wip?: boolean;
   date?: string; // "YYYY-MM" — used for sorting only, not displayed
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -15,6 +16,7 @@ export const projects: Project[] = [
     featured: true,
     wip: false,
     date: "2026-02",
+    image: "/images/projects/budget-flow-strategy.png",
   },
   {
     title: "Backyard Blackjack",
@@ -23,6 +25,7 @@ export const projects: Project[] = [
     featured: true,
     wip: false,
     date: "2024-10",
+    image: "/images/projects/backyardblackjackmain.png",
   },
   {
     title: "Simple 8-Bit CPU",
@@ -38,6 +41,7 @@ export const projects: Project[] = [
     description: "Designed and manufactured a custom mechanical keyboard PCB",
     featured: false,
     wip: true,
+    image: "/images/projects/USBportkeyboardproject.png",
   },
   {
     title: "W65C02S Computer",
