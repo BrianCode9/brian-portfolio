@@ -15,7 +15,7 @@ const ProjectSection = () => {
         </h2>
         <div className='h-1 w-16 bg-orange-highlight mb-10' />
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10'>
           {featured.map(p => (
             <Link
               key={p.slug}

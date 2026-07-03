@@ -1,5 +1,6 @@
 // src/app/projects/<slug>/page.tsx
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedButton from "@/components/ui/animatedbutton";
 
 
@@ -23,6 +24,19 @@ export default function ProjectPage() {
                     </h1>
                     <div className="h-1 w-16 bg-orange-highlight" />
                 </header>
+
+                {/* GALLERY */}
+                <section className="mb-10">
+                    <div className="border border-gray-200 rounded overflow-hidden">
+                        <Image
+                            src="/images/projects/base-hero.png"
+                            alt="Portfolio site hero section"
+                            width={800}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
+                </section>
 
                 {/* SUMMARY & META */}
                 <section className="mb-12">
