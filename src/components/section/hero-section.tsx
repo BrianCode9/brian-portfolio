@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <div className='w-full bg-white px-6 flex justify-center items-center min-h-[55vh] md:min-h-[65vh]'>
+    <div className='relative w-full bg-white px-6 flex justify-center items-center min-h-screen'>
       <div className='flex flex-col items-center text-center gap-5'>
 
         <motion.p
@@ -47,6 +48,16 @@ const HeroSection = () => {
         </motion.div>
 
       </div>
+
+      <motion.a
+        href='#about'
+        aria-label='Scroll to About section'
+        className='absolute bottom-10 left-1/2 -translate-x-1/2 text-suit-teal'
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <ChevronDown size={36} />
+      </motion.a>
     </div>
   );
 }
