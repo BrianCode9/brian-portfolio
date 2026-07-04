@@ -6,11 +6,15 @@ import AnimatedButton from "./animatedbutton";
 interface WorkInProgressProps {
   backHref?: string;
   backLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
 }
 
 export default function WorkInProgress({
   backHref = "/projects",
   backLabel = "Back to Projects",
+  secondaryHref,
+  secondaryLabel,
 }: WorkInProgressProps) {
   return (
     <main className="bg-suit-teal flex min-h-screen flex-col items-center justify-center gap-10 px-6 text-center text-white">
@@ -25,9 +29,16 @@ export default function WorkInProgress({
           This page is still being built. Check back soon.
         </p>
       </div>
-      <Link href={backHref}>
-        <AnimatedButton variant="teal">{backLabel}</AnimatedButton>
-      </Link>
+      <div className="flex flex-col gap-4 sm:flex-row">
+        <Link href={backHref}>
+          <AnimatedButton variant="teal">{backLabel}</AnimatedButton>
+        </Link>
+        {secondaryHref && secondaryLabel && (
+          <Link href={secondaryHref}>
+            <AnimatedButton variant="teal">{secondaryLabel}</AnimatedButton>
+          </Link>
+        )}
+      </div>
     </main>
   );
 }
