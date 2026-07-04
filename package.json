@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run format && npm run lint -- --fix && npm run typecheck",
+    "clean": "rimraf .next",
+    "check-images": "node scripts/check-images.mjs"
   },
   "dependencies": {
     "@mapbox/leaflet-omnivore": "^0.3.4",
@@ -37,6 +43,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
+    "prettier": "^3.9.4",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "rimraf": "^6.1.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
