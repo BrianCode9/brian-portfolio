@@ -1,4 +1,4 @@
-# Brian Ngo — Portfolio Site
+# Brian Ngo - Portfolio Site
 
 My personal portfolio site, built with Next.js. Has my projects, work experience, and an about page.
 
@@ -20,10 +20,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Structure
 
-- `src/app` — pages (home, about, experience, projects, project detail pages)
-- `src/components` — shared UI and section components
-- `src/data` — project, experience, and travel data
-- `public/images` — screenshots and photos used across the site
+- `src/app` - pages (home, about, experience, projects, project detail pages)
+- `src/components` - shared UI and section components
+- `src/data` - project, experience, and travel data
+- `public/images` - screenshots and photos used across the site
 
 ## Deployment
 

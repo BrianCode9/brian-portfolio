@@ -10,9 +10,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run format && npm run lint -- --fix && npm run typecheck",
+    "verify": "npm run format && npm run lint -- --fix && npm run typecheck && npm run check-no-emdash",
     "clean": "rimraf .next",
-    "check-images": "node scripts/check-images.mjs"
+    "check-images": "node scripts/check-images.mjs",
+    "check-no-emdash": "node scripts/check-no-emdash.mjs"
   },
   "dependencies": {
     "@mapbox/leaflet-omnivore": "^0.3.4",
