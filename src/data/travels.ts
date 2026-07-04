@@ -6,7 +6,7 @@ export interface TravelPlace {
   lng: number;
   category: TravelCategory;
   description?: string;
-  photo?: string; // path relative to /public, e.g. "/photos/nyc.jpg"
+  photos?: string[]; // paths under /public, e.g. "/images/travel/nyc-skyline.jpg"
 }
 
 export const categoryColors: Record<TravelCategory, string> = {
@@ -163,7 +163,7 @@ export const travelPlaces: TravelPlace[] = [
     lat: 10.8231,
     lng: 106.6297,
     category: "travel",
-    description: "Saigon — my favorite place I've visited",
+    description: "Saigon - my favorite place I've visited",
   },
 
   // Acadia National Park area

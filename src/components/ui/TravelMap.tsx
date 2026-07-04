@@ -1,7 +1,7 @@
 "use client";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import {
@@ -9,7 +9,15 @@ import {
   categoryColors,
   categoryLabels,
   TravelCategory,
+  TravelPlace,
 } from "@/data/travels";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
 function makeIcon(color: string) {
   return L.divIcon({
@@ -29,6 +37,8 @@ function makeIcon(color: string) {
 }
 
 export default function TravelMap() {
+  const [selected, setSelected] = useState<TravelPlace | null>(null);
+
   const icons = useMemo(() => {
     if (typeof window === "undefined") return null;
     return Object.fromEntries(
@@ -79,16 +89,22 @@ export default function TravelMap() {
                       {place.description}
                     </p>
                   )}
-                  {place.photo && (
-                    <img
-                      src={place.photo}
-                      alt={place.name}
+                  {place.photos && place.photos.length > 0 && (
+                    <button
+                      onClick={() => setSelected(place)}
                       style={{
-                        width: "100%",
-                        borderRadius: "4px",
                         marginTop: "6px",
+                        fontSize: "12px",
+                        fontWeight: 600,
+                        color: "#C17D0A",
+                        cursor: "pointer",
+                        background: "none",
+                        border: "none",
+                        padding: 0,
                       }}
-                    />
+                    >
+                      View photos ({place.photos.length})
+                    </button>
                   )}
                 </div>
               </Popup>
@@ -116,6 +132,30 @@ export default function TravelMap() {
           )
         )}
       </div>
+
+      <Sheet
+        open={selected !== null}
+        onOpenChange={(open) => !open && setSelected(null)}
+      >
+        <SheetContent side="right" className="overflow-y-auto sm:max-w-md">
+          <SheetHeader>
+            <SheetTitle>{selected?.name}</SheetTitle>
+            {selected?.description && (
+              <SheetDescription>{selected.description}</SheetDescription>
+            )}
+          </SheetHeader>
+          <div className="flex flex-col gap-4 px-4 pb-4">
+            {selected?.photos?.map((photo) => (
+              <img
+                key={photo}
+                src={photo}
+                alt={selected.name}
+                className="w-full rounded-md object-cover"
+              />
+            ))}
+          </div>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 }
