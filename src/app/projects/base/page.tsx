@@ -31,7 +31,7 @@ export default function ProjectPage() {
         <section className="mb-10">
           <div className="overflow-hidden rounded border border-gray-200">
             <Image
-              src="/images/projects/brian-portfolio-herosection.png"
+              src="/images/projects/base-hero.png"
               alt="Portfolio site hero section"
               width={800}
               height={500}
@@ -49,7 +49,7 @@ export default function ProjectPage() {
           </p>
         </section>
 
-        {/* How It Works */}
+        {/* Tech Stack */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold md:text-3xl">Tech Stack</h2>
           <p className="text-base text-[var(--text-muted)]">

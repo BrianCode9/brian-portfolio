@@ -30,7 +30,8 @@ export const projects: Project[] = [
   {
     title: "Simple 8-Bit CPU",
     slug: "simple-cpu",
-    description: "Design, simulation, and place & route of an 8-bit CPU on a DE10-Lite FPGA",
+    description:
+      "Design, simulation, and place & route of an 8-bit CPU on a DE10-Lite FPGA",
     featured: true,
     wip: false,
     date: "2025-12",
@@ -39,7 +40,7 @@ export const projects: Project[] = [
   {
     title: "Custom Keyboard PCB",
     slug: "keyboard-pcb",
-    description: "Designed and manufactured a custom mechanical keyboard PCB",
+    description: "Designing and manufacturing a custom mechanical keyboard PCB",
     featured: false,
     wip: true,
     image: "/images/projects/USBportkeyboardproject.png",
@@ -47,14 +48,16 @@ export const projects: Project[] = [
   {
     title: "W65C02S Computer",
     slug: "6502-computer",
-    description: "A complete 6502-based computer built from discrete components",
+    description:
+      "A complete 6502-based computer built from discrete components",
     featured: false,
     wip: true,
   },
   {
     title: "Personal Website",
     slug: "base",
-    description: "This portfolio — built with Next.js, TypeScript, and Tailwind CSS",
+    description:
+      "This portfolio — built with Next.js, TypeScript, and Tailwind CSS",
     featured: false,
     wip: false,
     image: "/images/projects/base-hero.png",
@@ -63,7 +66,8 @@ export const projects: Project[] = [
   {
     title: "CMOS Inverter & Logic Circuit Design",
     slug: "cmos-inverter",
-    description: "Simulated a CMOS inverter and designed a multi-transistor logic circuit implementing A+BC",
+    description:
+      "Simulated a CMOS inverter and designed a multi-transistor logic circuit implementing A+BC",
     featured: true,
     wip: false,
     date: "2026-04",
