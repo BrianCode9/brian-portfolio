@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   featured?: boolean;
   wip?: boolean;
-  date?: string; // "YYYY-MM" — used for sorting only, not displayed
+  date?: string; // "YYYY-MM" - used for sorting only, not displayed
   image?: string;
 }
 
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Budget Flow",
     slug: "budget-flow",
-    description: "Budget tracking web app built at TartanHacks @ CMU",
+    description: "Budget tracking web app built at TartanHacks at CMU",
     featured: true,
     wip: false,
     date: "2026-02",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     title: "Custom Keyboard PCB",
     slug: "keyboard-pcb",
-    description: "Designing and manufacturing a custom mechanical keyboard PCB",
+    description: "",
     featured: false,
     wip: true,
     image: "/images/projects/USBportkeyboardproject.png",
@@ -48,16 +48,14 @@ export const projects: Project[] = [
   {
     title: "W65C02S Computer",
     slug: "6502-computer",
-    description:
-      "A complete 6502-based computer built from discrete components",
+    description: "",
     featured: false,
     wip: true,
   },
   {
     title: "Personal Website",
-    slug: "base",
-    description:
-      "This portfolio — built with Next.js, TypeScript, and Tailwind CSS",
+    slug: "personal-website",
+    description: "The website you're seeing now",
     featured: false,
     wip: false,
     image: "/images/projects/base-hero.png",

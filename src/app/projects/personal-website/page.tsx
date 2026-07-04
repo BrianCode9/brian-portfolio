@@ -1,20 +1,15 @@
-// Copy-paste scaffold for new project pages. Not linked anywhere in the
-// site and not listed in `src/data/projects.ts` - for reference only.
 import Link from "next/link";
+import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
 
 export const metadata = {
-  title: "Project Template",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  title: "Personal Website",
 };
 
 const project = {
-  title: "Project Title",
-  repoUrl: "",
+  title: "Personal Website",
+  repoUrl: "https://github.com/BrianCode9/brian-portfolio",
 };
 
 export default function ProjectPage() {
@@ -30,43 +25,52 @@ export default function ProjectPage() {
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
 
-        {/* Overview */}
+        <section className="mb-10">
+          <div className="border-suit-teal overflow-hidden rounded border-2">
+            <Image
+              src="/images/projects/base-hero.png"
+              alt="Portfolio site hero section"
+              width={800}
+              height={500}
+              className="h-auto w-full object-cover"
+            />
+          </div>
+        </section>
+
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Write about why you built this and what it does. Keep it to 2-3
-            sentences.
+            My personal website to showcase my life. Obviously, I showcase my
+            other projects, in the future travels, and my work experience.
           </p>
         </section>
 
-        {/* What I Did */}
         <section className="mb-12">
           <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
             What I Did
           </h2>
           <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
-            <li>Write a bullet for each concrete contribution you made.</li>
+            <li>
+              Built every page (Home, About, Experience, Projects, Travel) with
+              Next.js App Router, React, and TypeScript.
+            </li>
+            <li>Styling and designing the site with Tailwind CSS.</li>
+            <li>Documented my projects, trips, and experience.</li>
           </ul>
         </section>
 
-        {/* How It Works */}
-        <section className="mb-12">
-          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
-            How It Works
-          </h2>
-          <p className="text-base leading-relaxed text-gray-600">
-            Write about the mechanics of the project itself, not what you
-            learned.
-          </p>
-        </section>
-
-        {/* Built With */}
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
             Built With
           </h2>
           <div className="flex flex-wrap gap-2">
-            {["Tag One", "Tag Two"].map((tag) => (
+            {[
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Framer Motion",
+              "React Leaflet",
+            ].map((tag) => (
               <span
                 key={tag}
                 className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
@@ -77,27 +81,25 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        {/* Future Work */}
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
             Future Work
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Write about what you still want to add or improve.
+            Finish creating the travel pages and add more pictures to the entire
+            website to increase personalization.
           </p>
         </section>
 
         <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            {project.repoUrl && (
-              <Link
-                href={project.repoUrl}
-                target="_blank"
-                className="text-lg underline"
-              >
-                View repository
-              </Link>
-            )}
+            <Link
+              href={project.repoUrl}
+              target="_blank"
+              className="text-lg underline"
+            >
+              View repository
+            </Link>
           </div>
           <Link href={"/projects"}>
             <AnimatedButton variant="white">Back</AnimatedButton>
