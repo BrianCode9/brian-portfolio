@@ -1,16 +1,20 @@
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import NavBar from '@/components/section/navbar';
-import AnimatedButton from '@/components/ui/animatedbutton';
-import { experiences } from '@/data/experiences';
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import NavBar from "@/components/section/navbar";
+import AnimatedButton from "@/components/ui/animatedbutton";
+import { experiences } from "@/data/experiences";
 
 export function generateStaticParams() {
-  return experiences.map(e => ({ slug: e.slug }));
+  return experiences.map((e) => ({ slug: e.slug }));
 }
 
-export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ExperiencePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  const exp = experiences.find(e => e.slug === slug);
+  const exp = experiences.find((e) => e.slug === slug);
   if (!exp) notFound();
 
   return (
@@ -20,27 +24,30 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
 
       {/* Hero */}
       {exp.coverPhoto ? (
-        <div className="w-full h-72 md:h-96 overflow-hidden">
+        <div className="h-72 w-full overflow-hidden md:h-96">
           <img
             src={exp.coverPhoto}
             alt={exp.title}
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
       ) : (
-        <div className="w-full h-48 md:h-64 bg-suit-teal flex items-end px-8 pb-8">
-          <p className="text-white/50 text-sm tracking-widest uppercase">{exp.location}</p>
+        <div className="bg-suit-teal flex h-48 w-full items-end px-8 pb-8 md:h-64">
+          <p className="text-sm tracking-widest text-white/50 uppercase">
+            {exp.location}
+          </p>
         </div>
       )}
 
-      <div className="max-w-3xl mx-auto px-6 py-10">
+      <div className="mx-auto max-w-3xl px-6 py-10">
         {/* Title + meta */}
         <div className="mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold mb-2">
-            {exp.title}
-          </h1>
-          <div className="h-1 w-16 bg-orange-highlight mb-3" />
-          <p className="text-gray-500 text-lg">{exp.location}{exp.date ? ` · ${exp.date}` : ''}</p>
+          <h1 className="mb-2 text-4xl font-bold md:text-6xl">{exp.title}</h1>
+          <div className="bg-orange-highlight mb-3 h-1 w-16" />
+          <p className="text-lg text-gray-500">
+            {exp.location}
+            {exp.date ? ` · ${exp.date}` : ""}
+          </p>
         </div>
 
         {/* Body */}
@@ -54,12 +61,14 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
 
         {/* Sections */}
         {exp.sections && exp.sections.length > 0 && (
-          <div className="space-y-10 mt-8">
+          <div className="mt-8 space-y-10">
             {exp.sections.map((section, i) => (
               <div key={i}>
-                <h2 className="text-2xl font-bold mb-2">{section.title}</h2>
-                <div className="h-1 w-10 bg-orange-highlight mb-4" />
-                <p className="text-lg leading-relaxed text-gray-600">{section.content}</p>
+                <h2 className="mb-2 text-2xl font-bold">{section.title}</h2>
+                <div className="bg-orange-highlight mb-4 h-1 w-10" />
+                <p className="text-lg leading-relaxed text-gray-600">
+                  {section.content}
+                </p>
               </div>
             ))}
           </div>
@@ -68,15 +77,15 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         {/* Photo gallery */}
         {exp.photos && exp.photos.length > 0 && (
           <div className="mt-12">
-            <h2 className="text-2xl font-semibold mb-2">Photos</h2>
-            <div className="h-1 w-12 bg-orange-highlight mb-5" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h2 className="mb-2 text-2xl font-semibold">Photos</h2>
+            <div className="bg-orange-highlight mb-5 h-1 w-12" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {exp.photos.map((src, i) => (
                 <div key={i} className="overflow-hidden rounded-sm">
                   <img
                     src={src}
                     alt={`${exp.title} photo ${i + 1}`}
-                    className="w-full h-60 object-cover hover:scale-105 transition-transform duration-300"
+                    className="h-60 w-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               ))}
@@ -85,7 +94,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         )}
 
         {/* Back */}
-        <div className="flex justify-end mt-12">
+        <div className="mt-12 flex justify-end">
           <Link href="/experiences">
             <AnimatedButton variant="white">Back</AnimatedButton>
           </Link>
