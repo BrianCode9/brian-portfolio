@@ -60,6 +60,17 @@ export default function ProjectPage() {
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
+            Budget flow was built at CMU&apos;s hackathon (TartanHacks). The
+            app&apos;s idea is to help everyday people visualize their
+            spending.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
+            What I Did
+          </h2>
+          <p className="text-base leading-relaxed text-gray-600">
             Coming soon.
           </p>
         </section>
@@ -75,7 +86,7 @@ export default function ProjectPage() {
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
-            Future Work
+            Built With
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
             Coming soon.

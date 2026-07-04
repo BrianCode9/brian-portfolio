@@ -7,6 +7,10 @@ export const metadata = {
   title: "CMOS Inverter & Logic Circuit Design",
 };
 
+const project = {
+  repoUrl: "",
+};
+
 export default function ProjectPage() {
   return (
     <main className="min-h-screen w-full bg-white text-black">
@@ -100,7 +104,34 @@ export default function ProjectPage() {
           </p>
         </section>
 
-        <footer className="mt-12 flex justify-end">
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+            Built With
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {["LTSpice"].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            {project.repoUrl && (
+              <Link
+                href={project.repoUrl}
+                target="_blank"
+                className="text-lg underline"
+              >
+                View repository
+              </Link>
+            )}
+          </div>
           <Link href="/projects">
             <AnimatedButton variant="white">Back</AnimatedButton>
           </Link>

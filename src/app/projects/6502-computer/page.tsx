@@ -32,6 +32,15 @@ export default function ProjectPage() {
         </section>
 
         <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
+            What I Did
+          </h2>
+          <p className="text-base leading-relaxed text-gray-600">
+            Coming soon.
+          </p>
+        </section>
+
+        <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
             How It Works
           </h2>
@@ -42,7 +51,7 @@ export default function ProjectPage() {
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
-            Future Work
+            Built With
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
             Coming soon.
