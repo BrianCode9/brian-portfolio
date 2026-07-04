@@ -20,7 +20,7 @@ export interface Experience {
 const PLACEHOLDER_SECTIONS: ExperienceSection[] = [
   {
     title: "Getting There",
-    content: "Write about how you got there — the drive, flight, or road trip.",
+    content: "Write about how you got there - the drive, flight, or road trip.",
   },
   {
     title: "Highlights",
@@ -56,9 +56,9 @@ export const experiences: Experience[] = [
     title: "Toronto & Niagara Falls",
     slug: "toronto",
     location: "Canada",
-    date: "",
+    date: "Spring Break",
     coverPhoto: "",
-    summary: "A trip across the border to Toronto and the Falls.",
+    summary: "A spring break trip across the border to Toronto and the Falls.",
     body: [],
     photos: [],
     icon: "🍁",
