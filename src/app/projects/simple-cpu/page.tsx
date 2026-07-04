@@ -56,8 +56,7 @@ export default function ProjectPage() {
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
             Final project for my digital logic lab (CPE 271L) at West Virginia
-            University, completed with Connor Cahill. An 8-bit CPU was designed
-            in VHDL and implemented on a DE-10 Lite FPGA. The processor supports
+            University. An 8-bit CPU was designed in VHDL and implemented on a DE-10 Lite FPGA. The processor supports
             three instructions — load, add, and store — and executes them
             through a multi-state fetch-decode-execute cycle driven by a state
             machine Control Unit.
