@@ -19,7 +19,7 @@ export default function ProjectPage() {
       <div className="mx-auto max-w-4xl px-6 py-12">
         <header className="mb-8">
           <h1 className="mb-2 text-4xl font-bold md:text-6xl">
-            CMOS Inverter & Logic Circuit Design
+            CMOS Inverter & Clocked CMOS Logic Circuit Design
           </h1>
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
@@ -82,8 +82,8 @@ export default function ProjectPage() {
           </h2>
           <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
             <li>
-              Simulated a CMOS inverter with two PMOS sizings (W = 20 µm and 40
-              µm) and compared voltage transfer curves and noise margins.
+              Simulated a CMOS inverter with a PMOS sizing of W = 11 µm and
+              analyzed its voltage transfer curve and noise margins.
             </li>
             <li>
               Designed a CMOS logic circuit implementing the complement of A+BC
