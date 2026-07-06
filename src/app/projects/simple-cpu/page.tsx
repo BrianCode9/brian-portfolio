@@ -59,10 +59,10 @@ export default function ProjectPage() {
             University. Starting from a provided VHDL template with the ALU,
             RAM, MUX, and registers already built, I completed the Program
             Counter, designed the Control Unit, and wired everything together
-            into a working 8-bit CPU on a DE10-Lite FPGA. The finished
-            processor supports three instructions (load, add, and store) and
-            executes them through a multi-state fetch, decode, and execute
-            cycle driven entirely by the clock signal.
+            into a working 8-bit CPU on a DE10-Lite FPGA. The finished processor
+            supports three instructions (load, add, and store) and executes them
+            through a multi-state fetch, decode, and execute cycle driven
+            entirely by the clock signal.
           </p>
         </section>
 
@@ -77,8 +77,8 @@ export default function ProjectPage() {
             </li>
             <li>
               Diagrammed the full CPU datapath, labeling every connection with
-              the signal names used in the VHDL (cuToMarLoad, pcToMarMux,
-              irOut, marToRamReadAddr, and others).
+              the signal names used in the VHDL (cuToMarLoad, pcToMarMux, irOut,
+              marToRamReadAddr, and others).
             </li>
             <li>
               Wrote out the STOREA sequence in plain English, then mapped the
@@ -87,8 +87,8 @@ export default function ProjectPage() {
             </li>
             <li>
               Transcribed the finite state machine into VHDL case statements,
-              defining which control signals go high or low and which ALU
-              opcode is active at each state.
+              defining which control signals go high or low and which ALU opcode
+              is active at each state.
             </li>
             <li>
               Instantiated and connected every component in a top-level entity
@@ -108,11 +108,11 @@ export default function ProjectPage() {
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
             Building the Control Unit component by component made it clear how
-            critical signal routing and timing are: one missing state
-            transition was enough to stall the entire processor. Debugging
-            waveforms in Quartus also reinforced the importance of correct
-            clock generation and signal width matching when integrating
-            multiple hardware modules.
+            critical signal routing and timing are: one missing state transition
+            was enough to stall the entire processor. Debugging waveforms in
+            Quartus also reinforced the importance of correct clock generation
+            and signal width matching when integrating multiple hardware
+            modules.
           </p>
         </section>
 
