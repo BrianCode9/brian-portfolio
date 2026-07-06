@@ -60,9 +60,9 @@ export default function ProjectPage() {
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Budget flow was built at CMU&apos;s hackathon (TartanHacks). The
-            app&apos;s idea is to help everyday people visualize their
-            spending.
+            Budget flow was built at CMU's hackathon (TartanHacks). The app's idea is to help everyday people visualize their spending.
+            The app had spending analytics (trends, charts, and merchant tracking), budget planner, budget strategy page that used the Dedalus AI API to suggest savings, and debt payoff planner.
+            We presented it to 5-8 judgets at the competition. No hackathon win; however, had a good time at CMU and with the team
           </p>
         </section>
 
@@ -70,10 +70,19 @@ export default function ProjectPage() {
           <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
             What I Did
           </h2>
-          <p className="text-base leading-relaxed text-gray-600">
-            Coming soon.
-          </p>
+          <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
+            <li>
+              Typescript to implement users and AI faetures with the Nessie Capital One and Dedalus API
+            </li>
+            <li>
+              Created serveral pages including budget strategy and budget visualization page, using Sankey API and React
+            </li>
+            <li>
+              Wrote seed script to populate database for easier development and testing
+            </li>
+          </ul>
         </section>
+
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
@@ -87,6 +96,31 @@ export default function ProjectPage() {
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
             Built With
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Capital One Nessie API",
+              "Dedalus AI Agent API",
+              "Sankey API",
+              "React",
+              "TypeScript",
+              "Tailwind CSS",
+              "Next.js",
+              "Recharts",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+            Future Work
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
             Coming soon.
