@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Budget Flow",
     slug: "budget-flow",
-    description: "Budget tracking web app built at TartanHacks at CMU",
+    description: "Budget tracking web app built at TartanHacks (CMU)",
     featured: true,
     wip: false,
     date: "2026-02",
@@ -21,7 +21,8 @@ export const projects: Project[] = [
   {
     title: "Backyard Blackjack",
     slug: "backyard-blackjack",
-    description: "Blackjack game built at SteelHacks",
+    description:
+      "Blackjack game built at SteelHacks (University of Pittsburgh)",
     featured: false,
     wip: false,
     date: "2024-10",
@@ -31,7 +32,7 @@ export const projects: Project[] = [
     title: "Simple 8-Bit CPU",
     slug: "simple-cpu",
     description:
-      "Design, simulation, and place & route of an 8-bit CPU on a DE10-Lite FPGA",
+      "Completed the Program Counter and Control Unit for an 8-bit CPU in VHDL on a DE10-Lite FPGA",
     featured: true,
     wip: false,
     date: "2025-12",
@@ -65,7 +66,7 @@ export const projects: Project[] = [
     title: "CMOS Inverter & Logic Circuit Design",
     slug: "cmos-inverter",
     description:
-      "Simulated a CMOS inverter and designed a multi-transistor logic circuit implementing A+BC",
+      "Designed, simulated, and optimized noise margins for a CMOS inverter and a clocked CMOS circuit",
     featured: true,
     wip: false,
     date: "2026-04",
