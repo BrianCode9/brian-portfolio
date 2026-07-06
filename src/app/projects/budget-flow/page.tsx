@@ -63,10 +63,10 @@ export default function ProjectPage() {
             Budget flow was built at CMU&apos;s hackathon (TartanHacks). The
             app&apos;s idea is to help everyday people visualize their spending.
             The app had spending analytics (trends, charts, and merchant
-            tracking), budget planner, budget strategy page that used the
-            Dedalus AI API to suggest savings, and debt payoff planner. We
+            tracking), a budget planner, a budget strategy page that used the
+            Dedalus AI API to suggest savings, and a debt payoff planner. We
             presented it to 5-8 judges at the competition. No hackathon win;
-            however, had a good time at CMU and with the team.
+            however, we had a good time at CMU with the team.
           </p>
         </section>
 
@@ -76,18 +76,32 @@ export default function ProjectPage() {
           </h2>
           <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
             <li>
-              Typescript to implement users and AI features with the Nessie
-              Capital One and Dedalus API
+              Used TypeScript to implement user accounts and AI features with
+              the Nessie Capital One and Dedalus API
             </li>
             <li>
-              Created several pages including budget strategy and budget
-              visualization page, using Sankey API and React
+              Created several pages, including a budget strategy page and a
+              budget visualization page, using the Sankey API and React
             </li>
             <li>
-              Wrote seed script to populate database for easier development and
-              testing
+              Wrote a seed script to populate the database for easier
+              development and testing
             </li>
           </ul>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+            How It Works
+          </h2>
+          <p className="text-base leading-relaxed text-gray-600">
+            Users first create their account. After that, they can connect their
+            bank account to the website, which allows us to automatically
+            process their bank statements. This allows us to immediately give
+            them insights and visualizations of their spending. After this,
+            users can go through and get tips and guidance on how to spend
+            better, pay debt off faster, and invest smarter.
+          </p>
         </section>
 
         <section className="mb-12">
