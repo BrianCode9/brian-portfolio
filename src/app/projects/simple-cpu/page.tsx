@@ -56,10 +56,13 @@ export default function ProjectPage() {
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
             Final project for my digital logic lab (CPE 271L) at West Virginia
-            University. An 8-bit CPU was designed in VHDL and implemented on a DE-10 Lite FPGA. The processor supports
-            three instructions — load, add, and store — and executes them
-            through a multi-state fetch-decode-execute cycle driven by a state
-            machine Control Unit.
+            University. Starting from a provided VHDL template with the ALU,
+            RAM, MUX, and registers already built, I completed the Program
+            Counter, designed the Control Unit, and wired everything together
+            into a working 8-bit CPU on a DE10-Lite FPGA. The finished
+            processor supports three instructions (load, add, and store) and
+            executes them through a multi-state fetch, decode, and execute
+            cycle driven entirely by the clock signal.
           </p>
         </section>
 
@@ -69,22 +72,32 @@ export default function ProjectPage() {
           </h2>
           <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
             <li>
-              Wrote individual VHDL modules for the ALU, Program Counter,
-              Instruction Register, Control Unit, two-to-one MUX, RAM, and
-              registers.
+              Implemented the Program Counter&apos;s increment logic in VHDL
+              using a variable and the := assignment operator.
             </li>
             <li>
-              Implemented a state machine Control Unit that decodes a 3-bit
-              opcode and sequences all control signals through each instruction
-              cycle.
+              Diagrammed the full CPU datapath, labeling every connection with
+              the signal names used in the VHDL (cuToMarLoad, pcToMarMux,
+              irOut, marToRamReadAddr, and others).
             </li>
             <li>
-              Connected all components in a top-level CPU file using port map
-              statements and internal signal wiring.
+              Wrote out the STOREA sequence in plain English, then mapped the
+              Fetch, LOADA, ADDA, and STOREA sequences to enumerated states in
+              the Control Unit&apos;s finite state machine.
             </li>
             <li>
-              Verified correct operation by running a test program through RAM
-              and checking accumulator values at each instruction step.
+              Transcribed the finite state machine into VHDL case statements,
+              defining which control signals go high or low and which ALU
+              opcode is active at each state.
+            </li>
+            <li>
+              Instantiated and connected every component in a top-level entity
+              through port mapping, following the CPU diagram.
+            </li>
+            <li>
+              Verified correct operation in the Quartus waveform simulator,
+              confirming the clk, aOut, irOut, pcOut, and increment signals as
+              the CPU ran entirely off the clock with no external inputs.
             </li>
           </ul>
         </section>
@@ -94,13 +107,29 @@ export default function ProjectPage() {
             How It Works
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Building the CPU component by component made it clear how critical
-            signal routing and timing are — one missing state transition in the
-            Control Unit was enough to stall the entire processor. Debugging
-            waveforms in Quartus also reinforced the importance of correct clock
-            generation and signal width matching when integrating multiple
-            hardware modules.
+            Building the Control Unit component by component made it clear how
+            critical signal routing and timing are: one missing state
+            transition was enough to stall the entire processor. Debugging
+            waveforms in Quartus also reinforced the importance of correct
+            clock generation and signal width matching when integrating
+            multiple hardware modules.
           </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+            Built With
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {["Quartus Prime Lite", "DE10-Lite", "VHDL"].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </section>
 
         <footer className="mt-12 flex justify-end">

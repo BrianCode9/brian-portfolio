@@ -66,6 +66,7 @@ export default function ProjectPage() {
           <div className="flex flex-wrap gap-2">
             {[
               "Next.js",
+              "React",
               "TypeScript",
               "Tailwind CSS",
               "Framer Motion",

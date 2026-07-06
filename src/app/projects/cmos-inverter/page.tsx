@@ -25,7 +25,7 @@ export default function ProjectPage() {
         </header>
 
         <section className="mb-10">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="overflow-hidden rounded border border-gray-200">
               <Image
                 src="/images/projects/cmos-inverter.png"
@@ -48,6 +48,15 @@ export default function ProjectPage() {
               <Image
                 src="/images/projects/clocked-cmos.png"
                 alt="Clocked CMOS logic circuit schematic"
+                width={800}
+                height={500}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded border border-gray-200">
+              <Image
+                src="/images/projects/cmos-iv-characteristic.png"
+                alt="Inverter voltage transfer and IV characteristic curve"
                 width={800}
                 height={500}
                 className="h-auto w-full object-cover"
@@ -109,7 +118,7 @@ export default function ProjectPage() {
             Built With
           </h2>
           <div className="flex flex-wrap gap-2">
-            {["LTSpice"].map((tag) => (
+            {["LTSpice", "Excel"].map((tag) => (
               <span
                 key={tag}
                 className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
