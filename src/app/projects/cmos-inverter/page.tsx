@@ -1,7 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import cmosInverterImg from "../../../../public/images/projects/cmos-inverter.png";
+import cmosLogicOnlyImg from "../../../../public/images/projects/cmos-logic-only.png";
+import clockedCmosImg from "../../../../public/images/projects/clocked-cmos.png";
+import cmosIvImg from "../../../../public/images/projects/cmos-iv-characteristic.png";
 
 export const metadata = {
   title: "CMOS Inverter & Logic Circuit Design",
@@ -24,55 +28,15 @@ export default function ProjectPage() {
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
 
-        <section className="mb-10">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/cmos-inverter.png"
-                alt="CMOS inverter schematic"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/cmos-logic-only.png"
-                alt="Unclocked A+BC logic circuit schematic"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/clocked-cmos.png"
-                alt="Clocked CMOS logic circuit schematic"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/cmos-iv-characteristic.png"
-                alt="Inverter voltage transfer and IV characteristic curve"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Final project for EE 251 at West Virginia University. A CMOS
-            inverter and multi-input logic circuit were simulated in LTSpice to
-            study how transistor sizing affects voltage transfer curves and
-            noise margins. The project progressed from a basic inverter to a
-            fully optimized clocked CMOS circuit implementing A+BC.
+            Final project for EE 251 (Digital Circuits) at West Virginia
+            University. I designed a CMOS inverter and a multi-input logic
+            circuit, then simulated them in LTSpice to study how transistor
+            sizing affects voltage transfer curves and noise margins. The
+            project progressed from a basic inverter to a fully optimized
+            clocked CMOS circuit implementing A+BC.
           </p>
         </section>
 
@@ -82,7 +46,7 @@ export default function ProjectPage() {
           </h2>
           <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
             <li>
-              Simulated a CMOS inverter with a PMOS sizing of W = 11 µm and
+              Simulated a CMOS inverter with a PMOS sizing of L = 10 µm and
               analyzed its voltage transfer curve and noise margins.
             </li>
             <li>
@@ -102,14 +66,10 @@ export default function ProjectPage() {
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
-            How It Works
+            Procedure
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Transistor sizing directly controls switching symmetry. A PMOS that
-            is too wide pulls the output high too strongly, shifting the
-            transition point and widening the gap between NMH and NML. Iterating
-            on W/L ratios through simulation is the practical method for
-            balancing noise margins in multi-input logic circuits.
+            The project had three parts plus a bonus part. In the first part
           </p>
         </section>
 
@@ -128,6 +88,31 @@ export default function ProjectPage() {
             ))}
           </div>
         </section>
+
+        <ProjectGallery
+          images={[
+            {
+              src: cmosInverterImg,
+              alt: "CMOS inverter schematic",
+              caption: "CMOS Inverter Schematic",
+            },
+            {
+              src: cmosLogicOnlyImg,
+              alt: "Unclocked A+BC logic circuit schematic",
+              caption: "CMOS Logic Circuit (A+BC)",
+            },
+            {
+              src: clockedCmosImg,
+              alt: "Clocked CMOS logic circuit schematic",
+              caption: "Clocked CMOS Circuit (A+BC)",
+            },
+            {
+              src: cmosIvImg,
+              alt: "Inverter voltage transfer and IV characteristic curve",
+              caption: "Inverter Voltage Transfer Characteristic",
+            },
+          ]}
+        />
 
         <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>

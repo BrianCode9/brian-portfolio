@@ -1,7 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import loginImg from "../../../../public/images/projects/backyardblackjacklogin.png";
+import mainImg from "../../../../public/images/projects/backyardblackjackmain.png";
+import dealingImg from "../../../../public/images/projects/backyardblackjackdealingcardsscreen.png";
 
 export const metadata = {
   title: "Backyard Blackjack",
@@ -30,29 +33,6 @@ export default function ProjectPage() {
             statistics to be able to also teach players how they can better
             improve their decision making.
           </p>
-        </section>
-
-        <section className="mb-10">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/backyardblackjacklogin.png"
-                alt="Backyard Blackjack login screen"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/backyardblackjackmain.png"
-                alt="Backyard Blackjack gameplay"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
         </section>
 
         <section className="mb-12">
@@ -115,6 +95,26 @@ export default function ProjectPage() {
             ))}
           </div>
         </section>
+
+        <ProjectGallery
+          images={[
+            {
+              src: loginImg,
+              alt: "Backyard Blackjack login screen",
+              caption: "Login Screen",
+            },
+            {
+              src: mainImg,
+              alt: "Backyard Blackjack gameplay",
+              caption: "Main Gameplay Screen",
+            },
+            {
+              src: dealingImg,
+              alt: "Backyard Blackjack dealing cards screen",
+              caption: "Dealing Cards Screen",
+            },
+          ]}
+        />
 
         <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <Link

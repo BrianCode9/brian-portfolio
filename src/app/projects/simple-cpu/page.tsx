@@ -1,7 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import cpuDiagramImg from "../../../../public/images/projects/cpu-diagram.png";
+import fsmImg from "../../../../public/images/projects/finite-state-machine.jpeg";
+import waveSimImg from "../../../../public/images/projects/cpu-wave-simulation.png";
 
 export const metadata = {
   title: "Simple 8-Bit CPU",
@@ -19,38 +22,6 @@ export default function ProjectPage() {
           </h1>
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
-
-        <section className="mb-10">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="overflow-hidden rounded border-2 border-gray-300">
-              <Image
-                src="/images/projects/cpu-diagram.png"
-                alt="CPU block diagram"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border-2 border-gray-300">
-              <Image
-                src="/images/projects/finite-state-machine.jpeg"
-                alt="Control unit finite state machine"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border-2 border-gray-300">
-              <Image
-                src="/images/projects/cpu-wave-simulation.png"
-                alt="Quartus waveform simulation"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
@@ -106,13 +77,23 @@ export default function ProjectPage() {
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
             How It Works
           </h2>
+          <p className="mb-4 text-base leading-relaxed text-gray-600">
+            How the CPU works can be visualized by the finite state machine
+            diagram below. The CPU fetches the first instruction from memory by
+            loading the first address into the memory address register (MAR).
+            The CPU then fetches the data at the address loaded into the MAR
+            and loads it into the memory data register in (MDRI). The op code
+            from the data (the three most significant bits) is decoded by the
+            control unit (CU).
+          </p>
           <p className="text-base leading-relaxed text-gray-600">
-            Building the Control Unit component by component made it clear how
-            critical signal routing and timing are: one missing state transition
-            was enough to stall the entire processor. Debugging waveforms in
-            Quartus also reinforced the importance of correct clock generation
-            and signal width matching when integrating multiple hardware
-            modules.
+            The CU enables certain components of the CPU based on the op code.
+            The three op codes that the CPU supports are LOADA, ADDA, and
+            STOREA. The LOADA operation takes the value at a specified address
+            and loads it into the accumulator. ADDA adds the value at a
+            specified address to the value in the accumulator by bitwise
+            addition. STOREA stores the value of the accumulator into memory at
+            a specified address.
           </p>
         </section>
 
@@ -131,6 +112,26 @@ export default function ProjectPage() {
             ))}
           </div>
         </section>
+
+        <ProjectGallery
+          images={[
+            {
+              src: cpuDiagramImg,
+              alt: "CPU block diagram",
+              caption: "CPU Datapath Block Diagram",
+            },
+            {
+              src: fsmImg,
+              alt: "Control unit finite state machine",
+              caption: "Control Unit Finite State Machine",
+            },
+            {
+              src: waveSimImg,
+              alt: "Quartus waveform simulation",
+              caption: "Quartus Waveform Simulation",
+            },
+          ]}
+        />
 
         <footer className="mt-12 flex justify-end">
           <Link href="/projects">

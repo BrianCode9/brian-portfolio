@@ -1,7 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import strategyImg from "../../../../public/images/projects/budget-flow-strategy.png";
+import statisticsImg from "../../../../public/images/projects/budget-flow-statistics.png";
+import historyImg from "../../../../public/images/projects/budget-flow-history.png";
 
 export const metadata = {
   title: "Budget Flow",
@@ -24,38 +27,6 @@ export default function ProjectPage() {
           </h1>
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
-
-        <section className="mb-10">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/budget-flow-strategy.png"
-                alt="Budget Flow strategy page"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/budget-flow-statistics.png"
-                alt="Budget Flow statistics page"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/budget-flow-history.png"
-                alt="Budget Flow history page"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
@@ -96,11 +67,12 @@ export default function ProjectPage() {
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
             Users first create their account. After that, they can connect their
-            bank account to the website, which allows us to automatically
-            process their bank statements. This allows us to immediately give
-            them insights and visualizations of their spending. After this,
-            users can go through and get tips and guidance on how to spend
-            better, pay debt off faster, and invest smarter.
+            bank account to the website (Nessie API), which allows us to
+            automatically process their bank statements. This allows us to
+            immediately give them insights and visualizations of their spending
+            using React and the Dedalus API. After this, users can go through
+            and get tips and guidance on how to spend better, pay debt off
+            faster, and invest smarter.
           </p>
         </section>
 
@@ -128,6 +100,26 @@ export default function ProjectPage() {
             ))}
           </div>
         </section>
+
+        <ProjectGallery
+          images={[
+            {
+              src: strategyImg,
+              alt: "Budget Flow strategy page",
+              caption: "Budget Strategy Page",
+            },
+            {
+              src: statisticsImg,
+              alt: "Budget Flow statistics page",
+              caption: "Spending Statistics Page",
+            },
+            {
+              src: historyImg,
+              alt: "Budget Flow history page",
+              caption: "Transaction History Page",
+            },
+          ]}
+        />
 
         <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>

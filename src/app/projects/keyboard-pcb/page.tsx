@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import usbPortImg from "../../../../public/images/projects/USBportkeyboardproject.png";
 
 export const metadata = {
   title: "Custom Keyboard PCB",
@@ -24,18 +25,6 @@ export default function ProjectPage() {
           </h1>
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
-
-        <section className="mb-10">
-          <div className="max-w-md overflow-hidden rounded border border-gray-200">
-            <Image
-              src="/images/projects/USBportkeyboardproject.png"
-              alt="Custom Keyboard PCB"
-              width={800}
-              height={500}
-              className="h-auto w-full object-cover"
-            />
-          </div>
-        </section>
 
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
@@ -70,6 +59,16 @@ export default function ProjectPage() {
             Coming soon.
           </p>
         </section>
+
+        <ProjectGallery
+          images={[
+            {
+              src: usbPortImg,
+              alt: "USB port schematic for the custom keyboard PCB",
+              caption: "USB Port Schematic",
+            },
+          ]}
+        />
 
         <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
