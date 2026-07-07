@@ -1,21 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import AnimatedButton from "./animatedbutton";
 
 interface WorkInProgressProps {
-  backHref?: string;
   backLabel?: string;
   secondaryHref?: string;
   secondaryLabel?: string;
 }
 
 export default function WorkInProgress({
-  backHref = "/projects",
-  backLabel = "Back to Projects",
+  backLabel = "Go Back",
   secondaryHref,
   secondaryLabel,
 }: WorkInProgressProps) {
+  const router = useRouter();
+
   return (
     <main className="bg-suit-teal flex min-h-screen flex-col items-center justify-center gap-10 px-6 text-center text-white">
       <div className="max-w-lg space-y-6">
@@ -30,9 +31,9 @@ export default function WorkInProgress({
         </p>
       </div>
       <div className="flex flex-col gap-4 sm:flex-row">
-        <Link href={backHref}>
-          <AnimatedButton variant="teal">{backLabel}</AnimatedButton>
-        </Link>
+        <AnimatedButton variant="teal" onClick={() => router.back()}>
+          {backLabel}
+        </AnimatedButton>
         {secondaryHref && secondaryLabel && (
           <Link href={secondaryHref}>
             <AnimatedButton variant="teal">{secondaryLabel}</AnimatedButton>
