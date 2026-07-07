@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   featured?: boolean;
   wip?: boolean;
-  date?: string; // "YYYY-MM" — used for sorting only, not displayed
+  date?: string; // "YYYY-MM" - used for sorting only, not displayed
   image?: string;
 }
 
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Budget Flow",
     slug: "budget-flow",
-    description: "Budget tracking web app built at TartanHacks @ CMU",
+    description: "Budget tracking web app built at TartanHacks (CMU)",
     featured: true,
     wip: false,
     date: "2026-02",
@@ -21,7 +21,8 @@ export const projects: Project[] = [
   {
     title: "Backyard Blackjack",
     slug: "backyard-blackjack",
-    description: "Blackjack game built at SteelHacks",
+    description:
+      "Blackjack game built at SteelHacks (University of Pittsburgh)",
     featured: false,
     wip: false,
     date: "2024-10",
@@ -30,7 +31,8 @@ export const projects: Project[] = [
   {
     title: "Simple 8-Bit CPU",
     slug: "simple-cpu",
-    description: "Design, simulation, and place & route of an 8-bit CPU on a DE10-Lite FPGA",
+    description:
+      "CPE-271 (Digital Logic) final project using VHDL to design a CPU",
     featured: true,
     wip: false,
     date: "2025-12",
@@ -39,7 +41,7 @@ export const projects: Project[] = [
   {
     title: "Custom Keyboard PCB",
     slug: "keyboard-pcb",
-    description: "Designed and manufactured a custom mechanical keyboard PCB",
+    description: "",
     featured: false,
     wip: true,
     image: "/images/projects/USBportkeyboardproject.png",
@@ -47,14 +49,14 @@ export const projects: Project[] = [
   {
     title: "W65C02S Computer",
     slug: "6502-computer",
-    description: "A complete 6502-based computer built from discrete components",
+    description: "",
     featured: false,
     wip: true,
   },
   {
     title: "Personal Website",
-    slug: "base",
-    description: "This portfolio — built with Next.js, TypeScript, and Tailwind CSS",
+    slug: "personal-website",
+    description: "The website you're seeing now",
     featured: false,
     wip: false,
     image: "/images/projects/base-hero.png",
@@ -63,7 +65,8 @@ export const projects: Project[] = [
   {
     title: "CMOS Inverter & Logic Circuit Design",
     slug: "cmos-inverter",
-    description: "Simulated a CMOS inverter and designed a multi-transistor logic circuit implementing A+BC",
+    description:
+      "Designed, simulated, and optimized noise margins for a CMOS inverter and a clocked CMOS circuit",
     featured: true,
     wip: false,
     date: "2026-04",

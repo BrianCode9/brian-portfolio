@@ -20,7 +20,7 @@ export interface Experience {
 const PLACEHOLDER_SECTIONS: ExperienceSection[] = [
   {
     title: "Getting There",
-    content: "Write about how you got there — the drive, flight, or road trip.",
+    content: "Write about how you got there - the drive, flight, or road trip.",
   },
   {
     title: "Highlights",
@@ -28,11 +28,13 @@ const PLACEHOLDER_SECTIONS: ExperienceSection[] = [
   },
   {
     title: "Food & Drink",
-    content: "Write about the best meals, local spots, and anything worth recommending.",
+    content:
+      "Write about the best meals, local spots, and anything worth recommending.",
   },
   {
     title: "Takeaways",
-    content: "Write about what you took away from the trip and whether you'd go back.",
+    content:
+      "Write about what you took away from the trip and whether you'd go back.",
   },
 ];
 
@@ -43,7 +45,8 @@ export const experiences: Experience[] = [
     location: "Mount Desert Island, Maine",
     date: "",
     coverPhoto: "",
-    summary: "Hiking the Beehive Trail, exploring Sand Beach, and taking in the Asticou Azalea Garden on Mount Desert Island.",
+    summary:
+      "Hiking the Beehive Trail, exploring Sand Beach, and taking in the Asticou Azalea Garden on Mount Desert Island.",
     body: [],
     photos: [],
     icon: "🌲",
@@ -53,9 +56,9 @@ export const experiences: Experience[] = [
     title: "Toronto & Niagara Falls",
     slug: "toronto",
     location: "Canada",
-    date: "",
+    date: "Spring Break",
     coverPhoto: "",
-    summary: "A trip across the border to Toronto and the Falls.",
+    summary: "A spring break trip across the border to Toronto and the Falls.",
     body: [],
     photos: [],
     icon: "🍁",

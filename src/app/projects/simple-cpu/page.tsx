@@ -1,87 +1,144 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import cpuDiagramImg from "../../../../public/images/projects/cpu-diagram.png";
+import fsmImg from "../../../../public/images/projects/finite-state-machine.jpeg";
+import waveSimImg from "../../../../public/images/projects/cpu-wave-simulation.png";
 
 export const metadata = {
-    title: "Simple 8-Bit CPU",
+  title: "Simple 8-Bit CPU",
 };
 
 export default function ProjectPage() {
-    return (
-        <main className="bg-white text-black w-full min-h-screen">
-            <NavBar />
-            <div className="h-16" />
-            <div className="max-w-4xl mx-auto px-6 py-12">
-                <header className="mb-8">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-2">
-                        Simple 8-Bit CPU
-                    </h1>
-                    <div className="h-1 w-16 bg-orange-highlight" />
-                </header>
+  return (
+    <main className="min-h-screen w-full bg-white text-black">
+      <NavBar />
+      <div className="h-16" />
+      <div className="mx-auto max-w-4xl px-6 py-12">
+        <header className="mb-8">
+          <h1 className="mb-2 text-4xl font-bold md:text-6xl">
+            Simple 8-Bit CPU
+          </h1>
+          <div className="bg-orange-highlight h-1 w-16" />
+        </header>
 
-                <section className="mb-10">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div className="border-2 border-gray-300 rounded overflow-hidden">
-                            <Image
-                                src="/images/projects/cpu-diagram.png"
-                                alt="CPU block diagram"
-                                width={800}
-                                height={500}
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-                        <div className="border-2 border-gray-300 rounded overflow-hidden">
-                            <Image
-                                src="/images/projects/finite-state-machine.jpeg"
-                                alt="Control unit finite state machine"
-                                width={800}
-                                height={500}
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-                        <div className="border-2 border-gray-300 rounded overflow-hidden">
-                            <Image
-                                src="/images/projects/cpu-wave-simulation.png"
-                                alt="Quartus waveform simulation"
-                                width={800}
-                                height={500}
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-                    </div>
-                </section>
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
+          <p className="text-base leading-relaxed text-gray-600">
+            Final project for my digital logic lab (CPE 271L) at West Virginia
+            University. Starting from a provided VHDL template with the ALU,
+            RAM, MUX, and registers already built, I completed the Program
+            Counter, designed the Control Unit, and wired everything together
+            into a working 8-bit CPU on a DE10-Lite FPGA. The finished processor
+            supports three instructions (load, add, and store) and executes them
+            through a multi-state fetch, decode, and execute cycle driven
+            entirely by the clock signal.
+          </p>
+        </section>
 
-                <section className="mb-12">
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-3">Overview</h2>
-                    <p className="text-gray-600 text-base leading-relaxed">
-                        Final project for CPE 271L at West Virginia University, completed with Connor Cahill. An 8-bit CPU was designed in VHDL and implemented on a DE-10 Lite FPGA. The processor supports three instructions — load, add, and store — and executes them through a multi-state fetch-decode-execute cycle driven by a state machine Control Unit.
-                    </p>
-                </section>
+        <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
+            What I Did
+          </h2>
+          <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
+            <li>
+              Implemented the Program Counter&apos;s increment logic in VHDL
+              using a variable and the := assignment operator.
+            </li>
+            <li>
+              Diagrammed the full CPU datapath, labeling every connection with
+              the signal names used in the VHDL (cuToMarLoad, pcToMarMux, irOut,
+              marToRamReadAddr, and others).
+            </li>
+            <li>
+              Wrote out the STOREA sequence in plain English, then mapped the
+              Fetch, LOADA, ADDA, and STOREA sequences to enumerated states in
+              the Control Unit&apos;s finite state machine.
+            </li>
+            <li>
+              Transcribed the finite state machine into VHDL case statements,
+              defining which control signals go high or low and which ALU opcode
+              is active at each state.
+            </li>
+            <li>
+              Instantiated and connected every component in a top-level entity
+              through port mapping, following the CPU diagram.
+            </li>
+            <li>
+              Verified correct operation in the Quartus waveform simulator,
+              confirming the clk, aOut, irOut, pcOut, and increment signals as
+              the CPU ran entirely off the clock with no external inputs.
+            </li>
+          </ul>
+        </section>
 
-                <section className="mb-12">
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-4">What I Did</h2>
-                    <ul className="list-disc list-inside text-base text-gray-600 space-y-2 leading-relaxed">
-                        <li>Wrote individual VHDL modules for the ALU, Program Counter, Instruction Register, Control Unit, two-to-one MUX, RAM, and registers.</li>
-                        <li>Implemented a state machine Control Unit that decodes a 3-bit opcode and sequences all control signals through each instruction cycle.</li>
-                        <li>Connected all components in a top-level CPU file using port map statements and internal signal wiring.</li>
-                        <li>Verified correct operation by running a test program through RAM and checking accumulator values at each instruction step.</li>
-                    </ul>
-                </section>
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+            How It Works
+          </h2>
+          <p className="mb-4 text-base leading-relaxed text-gray-600">
+            How the CPU works can be visualized by the finite state machine
+            diagram below. The CPU fetches the first instruction from memory by
+            loading the first address into the memory address register (MAR).
+            The CPU then fetches the data at the address loaded into the MAR
+            and loads it into the memory data register in (MDRI). The op code
+            from the data (the three most significant bits) is decoded by the
+            control unit (CU).
+          </p>
+          <p className="text-base leading-relaxed text-gray-600">
+            The CU enables certain components of the CPU based on the op code.
+            The three op codes that the CPU supports are LOADA, ADDA, and
+            STOREA. The LOADA operation takes the value at a specified address
+            and loads it into the accumulator. ADDA adds the value at a
+            specified address to the value in the accumulator by bitwise
+            addition. STOREA stores the value of the accumulator into memory at
+            a specified address.
+          </p>
+        </section>
 
-                <section className="mb-12">
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-3">What I Learned</h2>
-                    <p className="text-gray-600 text-base leading-relaxed">
-                        Building the CPU component by component made it clear how critical signal routing and timing are — one missing state transition in the Control Unit was enough to stall the entire processor. Debugging waveforms in Quartus also reinforced the importance of correct clock generation and signal width matching when integrating multiple hardware modules.
-                    </p>
-                </section>
+        <section className="mb-12">
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+            Built With
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {["Quartus Prime Lite", "DE10-Lite", "VHDL"].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </section>
 
-                <footer className="flex justify-end mt-12">
-                    <Link href="/projects">
-                        <AnimatedButton variant="white">Back</AnimatedButton>
-                    </Link>
-                </footer>
-            </div>
-        </main>
-    );
+        <ProjectGallery
+          images={[
+            {
+              src: cpuDiagramImg,
+              alt: "CPU block diagram",
+              caption: "CPU Datapath Block Diagram",
+            },
+            {
+              src: fsmImg,
+              alt: "Control unit finite state machine",
+              caption: "Control Unit Finite State Machine",
+            },
+            {
+              src: waveSimImg,
+              alt: "Quartus waveform simulation",
+              caption: "Quartus Waveform Simulation",
+            },
+          ]}
+        />
+
+        <footer className="mt-12 flex justify-end">
+          <Link href="/projects">
+            <AnimatedButton variant="white">Back</AnimatedButton>
+          </Link>
+        </footer>
+      </div>
+    </main>
+  );
 }

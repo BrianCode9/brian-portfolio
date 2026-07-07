@@ -1,12 +1,11 @@
-import React from 'react';
-import Link from "next/link";
+import React from "react";
 import AnimatedButton from "@/components/ui/animatedbutton";
 
 const Footer = () => {
   return (
-    <div className='bg-[#0a1f2b] sticky text-white pt-5 px-5 pb-10'>
-      <div className='flex flex-col justify-center'>
-        <div className='flex space-x-10 text-md items-center justify-end'>
+    <div className="sticky bg-[#0a1f2b] px-5 pt-5 pb-10 text-white">
+      <div className="flex flex-col justify-center">
+        <div className="text-md flex items-center justify-end space-x-10">
           <a href="#">
             <AnimatedButton variant="teal">Back Up</AnimatedButton>
           </a>
@@ -14,7 +13,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
-

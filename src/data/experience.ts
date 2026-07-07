@@ -6,6 +6,7 @@ export interface ExperienceEntry {
   duration: string;
   location: string;
   workplaceType?: string;
+  logo?: string;
 }
 
 export const experience: ExperienceEntry[] = [
@@ -17,6 +18,7 @@ export const experience: ExperienceEntry[] = [
     duration: "3 mos",
     location: "Morgantown, West Virginia, United States",
     workplaceType: "Hybrid",
+    logo: "/images/logos/wvu-logo.jpg",
   },
   {
     title: "Statler Student Ambassador",
@@ -25,6 +27,7 @@ export const experience: ExperienceEntry[] = [
     duration: "1 yr 4 mos",
     location: "Morgantown, West Virginia, United States",
     workplaceType: "On-site",
+    logo: "/images/logos/wvu-logo.jpg",
   },
   {
     title: "President and Founder",
@@ -33,6 +36,7 @@ export const experience: ExperienceEntry[] = [
     duration: "1 yr 6 mos",
     location: "Morgantown, West Virginia, United States",
     workplaceType: "Hybrid",
+    logo: "/images/logos/wvu-logo.jpg",
   },
   {
     title: "Assistant Swim Coach",
@@ -42,6 +46,7 @@ export const experience: ExperienceEntry[] = [
     duration: "3 yrs 3 mos",
     location: "Bridgeport, West Virginia, United States",
     workplaceType: "On-site",
+    logo: "/images/logos/bridgeport-country-club-logo.jpg",
   },
   {
     title: "Software Development Intern",
@@ -51,6 +56,7 @@ export const experience: ExperienceEntry[] = [
     duration: "1 yr 1 mo",
     location: "Fairmont, West Virginia, United States",
     workplaceType: "Hybrid",
+    logo: "/images/logos/agile5-logo.jpg",
   },
   {
     title: "President",
@@ -58,5 +64,16 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Oct 2024 - Dec 2025",
     duration: "1 yr 3 mos",
     location: "Morgantown, West Virginia, United States",
+    logo: "/images/logos/wvu-logo.jpg",
+  },
+  {
+    title: "Lifeguard Instructor",
+    company: "American Red Cross",
+    type: "Seasonal",
+    dateRange: "Dec 2022 - Dec 2025",
+    duration: "3 yrs",
+    location: "Clarksburg & Bridgeport, West Virginia, United States",
+    workplaceType: "On-site",
+    logo: "/images/logos/redcross-logo.jpg",
   },
 ];
