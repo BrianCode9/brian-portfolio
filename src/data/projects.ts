@@ -32,7 +32,7 @@ export const projects: Project[] = [
     title: "Simple 8-Bit CPU",
     slug: "simple-cpu",
     description:
-      "Completed the Program Counter and Control Unit for an 8-bit CPU in VHDL on a DE10-Lite FPGA",
+      "CPE-271 (Digital Logic) final project using VHDL to design a CPU",
     featured: true,
     wip: false,
     date: "2025-12",
