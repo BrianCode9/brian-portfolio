@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -43,11 +44,12 @@ export default function ProjectsPage() {
                   )}
 
                   {p.image && (
-                    <div className="h-40 w-full overflow-hidden">
-                      <img
+                    <div className="relative h-40 w-full overflow-hidden">
+                      <Image
                         src={p.image}
                         alt={p.title}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                   )}

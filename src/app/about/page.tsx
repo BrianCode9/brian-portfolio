@@ -1,5 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
@@ -18,10 +19,12 @@ export default function AboutPage() {
       <div className="bg-white">
         <div className="mx-auto w-full max-w-5xl px-6 py-10 text-black">
           <div className="flex flex-col gap-6 text-lg md:flex-row md:gap-10 md:text-xl">
-            <img
+            <Image
               className="h-auto w-full self-start border-2 object-cover md:w-56 lg:w-72"
               src="/images/profile/cmu.JPG"
               alt="Profile"
+              width={4032}
+              height={3024}
             />
             <div className="flex flex-col gap-6">
               <h1 className="mb-2 text-4xl font-bold md:text-5xl lg:text-6xl">

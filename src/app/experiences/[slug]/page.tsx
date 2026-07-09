@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
@@ -24,11 +25,12 @@ export default async function ExperiencePage({
 
       {/* Hero */}
       {exp.coverPhoto ? (
-        <div className="h-72 w-full overflow-hidden md:h-96">
-          <img
+        <div className="relative h-72 w-full overflow-hidden md:h-96">
+          <Image
             src={exp.coverPhoto}
             alt={exp.title}
-            className="h-full w-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
       ) : (
@@ -81,11 +83,15 @@ export default async function ExperiencePage({
             <div className="bg-orange-highlight mb-5 h-1 w-12" />
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {exp.photos.map((src, i) => (
-                <div key={i} className="overflow-hidden rounded-sm">
-                  <img
+                <div
+                  key={i}
+                  className="relative h-60 w-full overflow-hidden rounded-sm"
+                >
+                  <Image
                     src={src}
                     alt={`${exp.title} photo ${i + 1}`}
-                    className="h-60 w-full object-cover transition-transform duration-300 hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               ))}

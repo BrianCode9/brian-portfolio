@@ -1,6 +1,7 @@
 "use client";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -146,12 +147,17 @@ export default function TravelMap() {
           </SheetHeader>
           <div className="flex flex-col gap-4 px-4 pb-4">
             {selected?.photos?.map((photo) => (
-              <img
+              <div
                 key={photo}
-                src={photo}
-                alt={selected.name}
-                className="w-full rounded-md object-cover"
-              />
+                className="relative aspect-[4/3] w-full overflow-hidden rounded-md"
+              >
+                <Image
+                  src={photo}
+                  alt={selected.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             ))}
           </div>
         </SheetContent>
