@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import AnimatedButton from "../ui/animatedbutton";
 
@@ -33,11 +34,12 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="flex shrink-0 justify-center">
-              <div className="h-56 w-56 overflow-hidden rounded-full md:h-80 md:w-80 lg:h-90 lg:w-90">
-                <img
+              <div className="relative h-56 w-56 overflow-hidden rounded-full md:h-80 md:w-80 lg:h-90 lg:w-90">
+                <Image
                   src="/images/profile/NgoBucklews.jpg"
                   alt="Profile"
-                  className="h-full w-full object-cover object-top"
+                  fill
+                  className="object-cover object-top"
                 />
               </div>
             </div>
