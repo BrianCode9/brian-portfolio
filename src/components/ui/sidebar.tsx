@@ -47,7 +47,7 @@ export function Sidebar() {
               Contact
             </a>
             <Link
-              href="/documents/brian_ngo_most_updated.pdf"
+              href="/documents/brian_ngo_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-8 hover:underline"

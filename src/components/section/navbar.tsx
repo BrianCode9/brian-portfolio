@@ -12,7 +12,6 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
-  { href: "/experiences", label: "Travel" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -57,7 +56,7 @@ const NavBar = () => {
             <SiGithub size={25} />
           </Link>
           <Link
-            href="/documents/brian_ngo_most_updated.pdf"
+            href="/documents/brian_ngo_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Resume"
@@ -117,7 +116,7 @@ const NavBar = () => {
               <SiGithub size={25} />
             </Link>
             <Link
-              href="/documents/brian_ngo_most_updated.pdf"
+              href="/documents/brian_ngo_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
