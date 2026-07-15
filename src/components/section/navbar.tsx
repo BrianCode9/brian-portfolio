@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SiGithub } from "react-icons/si";
-import { Menu, X, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import AnimatedLink from "@/components/ui/animatedlink";
 
 const links = [
@@ -72,9 +72,24 @@ const NavBar = () => {
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label="Toggle menu"
-            className="p-1"
+            aria-expanded={mobileOpen}
+            className="relative h-6 w-6 p-1"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            <span
+              className={`absolute left-0 block h-[2px] w-6 bg-black transition-all duration-300 ${
+                mobileOpen ? "top-[11px] rotate-45" : "top-[4px]"
+              }`}
+            />
+            <span
+              className={`absolute top-[11px] left-0 block h-[2px] w-6 bg-black transition-opacity duration-300 ${
+                mobileOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-0 block h-[2px] w-6 bg-black transition-all duration-300 ${
+                mobileOpen ? "top-[11px] -rotate-45" : "top-[18px]"
+              }`}
+            />
           </button>
         </div>
       </div>
