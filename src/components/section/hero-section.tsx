@@ -23,7 +23,7 @@ const HeroSection = () => {
       <a
         href="#about"
         aria-label="Scroll to About section"
-        className="text-suit-teal absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="text-suit-teal absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
       >
         <ChevronDown size={36} />
       </a>
