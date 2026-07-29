@@ -6,7 +6,7 @@ export interface TravelPlace {
   lng: number;
   category: TravelCategory;
   description?: string;
-  photos?: string[]; // paths under /public, e.g. "/images/travel/nyc-skyline.jpg"
+  photos?: string[]; // public asset paths, rooted at the images/travel folder
 }
 
 export const categoryColors: Record<TravelCategory, string> = {

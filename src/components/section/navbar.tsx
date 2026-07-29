@@ -15,6 +15,34 @@ const links = [
   { href: "/#contact", label: "Contact" },
 ];
 
+const IconLink = ({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) => (
+  <div className="group relative">
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="block"
+    >
+      {children}
+    </Link>
+    <span
+      aria-hidden="true"
+      className="bg-suit-teal pointer-events-none absolute top-full left-1/2 mt-2 -translate-x-1/2 rounded px-2 py-1 text-sm whitespace-nowrap text-white opacity-0 shadow-md transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100"
+    >
+      {label}
+    </span>
+  </div>
+);
+
 const NavBar = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -47,22 +75,12 @@ const NavBar = () => {
               {l.label}
             </AnimatedLink>
           ))}
-          <Link
-            href="https://github.com/BrianCode9"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
+          <IconLink href="https://github.com/BrianCode9" label="GitHub">
             <SiGithub size={25} />
-          </Link>
-          <Link
-            href="/documents/brian_ngo_resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Resume"
-          >
+          </IconLink>
+          <IconLink href="/documents/brian_ngo_resume.pdf" label="Resume">
             <FileText size={25} />
-          </Link>
+          </IconLink>
         </div>
 
         {/* Mobile: name + hamburger */}

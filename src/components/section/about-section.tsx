@@ -27,9 +27,7 @@ const AboutSection = () => {
               </div>
               <div>
                 <Link href={"/about"}>
-                  <AnimatedButton variant="teal">
-                    More about me
-                  </AnimatedButton>
+                  <AnimatedButton variant="teal">More</AnimatedButton>
                 </Link>
               </div>
             </div>

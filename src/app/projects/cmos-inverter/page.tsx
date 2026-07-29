@@ -1,7 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
+import ProjectGallery from "@/components/ui/project-gallery";
+import inverterImg from "../../../../public/images/projects/cmos-inverter.png";
+import ivCharacteristicImg from "../../../../public/images/projects/cmos-iv-characteristic.png";
+import logicOnlyImg from "../../../../public/images/projects/cmos-logic-only.png";
+import clockedImg from "../../../../public/images/projects/clocked-cmos.png";
 
 export const metadata = {
   title: "CMOS Inverter & Logic Circuit Design",
@@ -24,55 +28,15 @@ export default function ProjectPage() {
           <div className="bg-orange-highlight h-1 w-16" />
         </header>
 
-        <section className="mb-10">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/cmos-inverter.png"
-                alt="CMOS inverter schematic"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/cmos-logic-only.png"
-                alt="Unclocked A+BC logic circuit schematic"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/clocked-cmos.png"
-                alt="Clocked CMOS logic circuit schematic"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded border border-gray-200">
-              <Image
-                src="/images/projects/cmos-iv-characteristic.png"
-                alt="Inverter voltage transfer and IV characteristic curve"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Final project for EE 251 (Digital Circuits) at West Virginia University. Designed a CMOS
-            inverter and multi-input logic circuit. Simulated in LTSpice to
-            study how transistor sizing affects voltage transfer curves and
-            noise margins. The project progressed from a basic inverter to a
-            fully optimized clocked CMOS circuit implementing A+BC.
+            Final project for EE 251 (Digital Circuits) at West Virginia
+            University. Designed a CMOS inverter and multi-input logic circuit.
+            Simulated in LTSpice to study how transistor sizing affects voltage
+            transfer curves and noise margins. The project progressed from a
+            basic inverter to a fully optimized clocked CMOS circuit
+            implementing A+BC.
           </p>
         </section>
 
@@ -101,15 +65,19 @@ export default function ProjectPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
-            Procedure
-          </h2>
+          <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Procedure</h2>
           <p className="text-base leading-relaxed text-gray-600">
-            The proejct had three parts plus a bonus part. In the first part, a normal inverter circuit was created with an unoptmized W/L ratio. 
-            The noise margins were calculated by exporting the IV characteristic data from LTspice into Excel. To find the noise margins, the slope needs to be calculated, 
-            using Vin / Vout. After calculating the slope for each data point, slopes of -1 were found. These points indicated the VIH, VIL, VOH, and VOL Using these numbers 
-            you can get the NML and NMH with the equations, NMH = VOH - VIH and NML = VIL - VOL. This process was iterated on for each circuit to optimize the noise margins 
-            for the standard CMOS inverter, the logic circuit, and the clocked CMOS circuit.
+            The proejct had three parts plus a bonus part. In the first part, a
+            normal inverter circuit was created with an unoptmized W/L ratio.
+            The noise margins were calculated by exporting the IV characteristic
+            data from LTspice into Excel. To find the noise margins, the slope
+            needs to be calculated, using Vin / Vout. After calculating the
+            slope for each data point, slopes of -1 were found. These points
+            indicated the VIH, VIL, VOH, and VOL Using these numbers you can get
+            the NML and NMH with the equations, NMH = VOH - VIH and NML = VIL -
+            VOL. This process was iterated on for each circuit to optimize the
+            noise margins for the standard CMOS inverter, the logic circuit, and
+            the clocked CMOS circuit.
           </p>
         </section>
 
@@ -128,6 +96,31 @@ export default function ProjectPage() {
             ))}
           </div>
         </section>
+
+        <ProjectGallery
+          images={[
+            {
+              src: inverterImg,
+              alt: "CMOS inverter schematic",
+              caption: "CMOS Inverter Schematic",
+            },
+            {
+              src: ivCharacteristicImg,
+              alt: "Inverter voltage transfer and IV characteristic curve",
+              caption: "Inverter Voltage Transfer Characteristic",
+            },
+            {
+              src: logicOnlyImg,
+              alt: "Unclocked A+BC logic circuit schematic",
+              caption: "Unclocked A+BC Logic Circuit",
+            },
+            {
+              src: clockedImg,
+              alt: "Clocked CMOS logic circuit schematic",
+              caption: "Clocked CMOS Logic Circuit",
+            },
+          ]}
+        />
 
         <footer className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
