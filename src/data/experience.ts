@@ -36,7 +36,7 @@ export const experience: ExperienceEntry[] = [
     duration: "1 yr 6 mos",
     location: "Morgantown, West Virginia, United States",
     workplaceType: "Hybrid",
-    logo: "/images/logos/wvu-logo.jpg",
+    logo: "/images/logos/softwarewvu-logo.png",
   },
   {
     title: "Assistant Swim Coach",
@@ -64,7 +64,7 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Oct 2024 - Dec 2025",
     duration: "1 yr 3 mos",
     location: "Morgantown, West Virginia, United States",
-    logo: "/images/logos/wvu-logo.jpg",
+    logo: "/images/logos/cyberwvu-logo.png",
   },
   {
     title: "Lifeguard Instructor",
