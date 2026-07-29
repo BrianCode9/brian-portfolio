@@ -16,7 +16,7 @@ const ContactSection = () => {
               Contact Me
             </div>
             <div className="bg-orange-highlight mb-2 h-1 w-12" />
-            <div>Email: brianngo2948@gmail.com</div>
+            <div>Email: brianngo2948 [at] gmail [dot] com</div>
             <div>LinkedIn: Brianngo9</div>
             <div>Instagram: Brian_Ngo9</div>
           </div>
