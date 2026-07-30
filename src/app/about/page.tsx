@@ -25,10 +25,12 @@ export default function AboutPage() {
               height={3024}
             />
             <div className="flex flex-col gap-6">
-              <h1 className="mb-2 text-4xl font-bold md:text-5xl lg:text-6xl">
-                My Start
-              </h1>
-              <div className="bg-orange-highlight mb-2 h-1 w-16" />
+              <div>
+                <h1 className="mb-2 text-4xl font-bold md:text-5xl lg:text-6xl">
+                  My Start
+                </h1>
+                <div className="bg-orange-highlight h-1 w-16" />
+              </div>
               <p>
                 My story starts in Michigan where I was born. There I learned
                 how to walk and speak my first language (Vietnamese). After
@@ -59,10 +61,12 @@ export default function AboutPage() {
       <div className="bg-suit-teal">
         <div className="mx-auto w-full max-w-5xl px-6 py-10 text-white">
           <div className="flex flex-col gap-6 text-lg md:text-xl">
-            <h2 className="mb-2 text-4xl font-bold md:text-5xl lg:text-6xl">
-              At WVU
-            </h2>
-            <div className="bg-orange-highlight mb-2 h-1 w-16" />
+            <div>
+              <h2 className="mb-2 text-4xl font-bold md:text-5xl lg:text-6xl">
+                At WVU
+              </h2>
+              <div className="bg-orange-highlight h-1 w-16" />
+            </div>
             <p>
               At WVU, I have been able to continue creating cool projects in
               classes and outside of them. My favorite project has been my CPE
