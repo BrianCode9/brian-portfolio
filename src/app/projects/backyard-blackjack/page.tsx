@@ -88,7 +88,7 @@ export default function ProjectPage() {
             ].map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600"
               >
                 {tag}
               </span>
@@ -120,7 +120,7 @@ export default function ProjectPage() {
           <Link
             href="https://github.com/Connor-W-Cahill/SteeleHacks"
             target="_blank"
-            className="text-base text-gray-700 underline hover:text-black"
+            className="text-base text-gray-600 underline hover:text-black"
           >
             View repository
           </Link>

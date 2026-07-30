@@ -9,11 +9,7 @@ export type GalleryImage = {
   caption: string;
 };
 
-export default function ProjectGallery({
-  images,
-}: {
-  images: GalleryImage[];
-}) {
+export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
   const [index, setIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
 
@@ -55,7 +51,7 @@ export default function ProjectGallery({
                 type="button"
                 onClick={goPrev}
                 aria-label="Previous image"
-                className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full border border-gray-200 bg-white/90 p-2 text-gray-700 shadow-sm transition hover:bg-white hover:text-black"
+                className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full border border-gray-200 bg-white/90 p-2 text-gray-600 shadow-sm transition hover:bg-white hover:text-black"
               >
                 <svg
                   width="16"
@@ -74,7 +70,7 @@ export default function ProjectGallery({
                 type="button"
                 onClick={goNext}
                 aria-label="Next image"
-                className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full border border-gray-200 bg-white/90 p-2 text-gray-700 shadow-sm transition hover:bg-white hover:text-black"
+                className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full border border-gray-200 bg-white/90 p-2 text-gray-600 shadow-sm transition hover:bg-white hover:text-black"
               >
                 <svg
                   width="16"
