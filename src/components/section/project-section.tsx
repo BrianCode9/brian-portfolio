@@ -9,7 +9,7 @@ const featured = projects.filter((p) => p.featured);
 
 const ProjectSection = () => {
   return (
-    <div className="bg-white px-6 py-16 md:py-24">
+    <div className="bg-white px-6 pt-10 pb-16 md:pt-14 md:pb-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="mb-2 text-3xl font-bold text-black md:text-5xl">
           Featured Projects

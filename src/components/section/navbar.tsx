@@ -63,7 +63,7 @@ const NavBar = () => {
     <nav
       className={`fixed top-0 right-0 left-0 z-40 text-black transition-colors duration-300 ${
         solid
-          ? "border-suit-teal border-b-2 bg-white"
+          ? "border-b-2 border-black bg-white"
           : "border-b-2 border-transparent bg-transparent"
       }`}
     >
@@ -90,21 +90,21 @@ const NavBar = () => {
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
-            className="relative h-6 w-6 p-1"
+            className="flex h-6 w-6 flex-col justify-center gap-[5px]"
           >
             <span
-              className={`absolute left-0 block h-[2px] w-6 bg-black transition-all duration-300 ${
-                mobileOpen ? "top-[11px] rotate-45" : "top-[4px]"
+              className={`block h-[2px] w-6 bg-black transition-all duration-300 ${
+                mobileOpen ? "translate-y-[7px] rotate-45" : ""
               }`}
             />
             <span
-              className={`absolute top-[11px] left-0 block h-[2px] w-6 bg-black transition-opacity duration-300 ${
+              className={`block h-[2px] w-6 bg-black transition-all duration-300 ${
                 mobileOpen ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-0 block h-[2px] w-6 bg-black transition-all duration-300 ${
-                mobileOpen ? "top-[11px] -rotate-45" : "top-[18px]"
+              className={`block h-[2px] w-6 bg-black transition-all duration-300 ${
+                mobileOpen ? "-translate-y-[7px] -rotate-45" : ""
               }`}
             />
           </button>

@@ -1,6 +1,9 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 
+// Matches --color-orange-highlight and ORANGE in animatedbutton.tsx
+const ORANGE = "#FF5733";
+
 interface AnimatedLinkProps {
   href?: string;
   children: React.ReactNode;
@@ -35,7 +38,15 @@ export default function AnimatedLink({
     <motion.a
       href={href}
       className={className}
-      style={{ position: "relative", textDecoration: "none", color: "black" }}
+      style={{
+        position: "relative",
+        textDecoration: "none",
+        color: "black",
+        // Keeps the underline the width of the text, not the container, when
+        // the link is a stretched item in a column flex (mobile nav dropdown)
+        display: "inline-block",
+        width: "fit-content",
+      }}
       initial="rest"
       whileHover="hover"
       animate="rest"
@@ -50,7 +61,7 @@ export default function AnimatedLink({
           left: 0,
           bottom: 0,
           height: "2px",
-          backgroundColor: "orange",
+          backgroundColor: ORANGE,
           display: "block",
         }}
         variants={variants}

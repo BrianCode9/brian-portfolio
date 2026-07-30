@@ -81,10 +81,10 @@ export default function ProjectPage() {
             How the CPU works can be visualized by the finite state machine
             diagram below. The CPU fetches the first instruction from memory by
             loading the first address into the memory address register (MAR).
-            The CPU then fetches the data at the address loaded into the MAR
-            and loads it into the memory data register in (MDRI). The op code
-            from the data (the three most significant bits) is decoded by the
-            control unit (CU).
+            The CPU then fetches the data at the address loaded into the MAR and
+            loads it into the memory data register in (MDRI). The op code from
+            the data (the three most significant bits) is decoded by the control
+            unit (CU).
           </p>
           <p className="text-base leading-relaxed text-gray-600">
             The CU enables certain components of the CPU based on the op code.
@@ -105,7 +105,7 @@ export default function ProjectPage() {
             {["Quartus Prime Lite", "DE10-Lite", "VHDL"].map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+                className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600"
               >
                 {tag}
               </span>

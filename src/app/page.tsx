@@ -1,6 +1,7 @@
 import NavBar from "@/components/section/navbar";
 import HeroSection from "@/components/section/hero-section";
 import AboutSection from "@/components/section/about-section";
+import TechStackSection from "@/components/section/tech-stack-section";
 import ProjectSection from "@/components/section/project-section";
 import ContactSection from "@/components/section/contact-section";
 import Footer from "@/components/ui/footer";
@@ -16,6 +17,10 @@ export default function Home() {
 
         <section id="about">
           <AboutSection />
+        </section>
+
+        <section id="tech-stack">
+          <TechStackSection />
         </section>
 
         <section id="projects">

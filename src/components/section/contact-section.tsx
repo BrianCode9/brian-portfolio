@@ -12,10 +12,12 @@ const ContactSection = () => {
         </div>
         <div className="bg-suit-teal w-full rounded-lg text-white">
           <div className="flex flex-col gap-3 p-6 md:p-10">
-            <div className="mb-1 text-2xl font-bold md:text-3xl">
-              Contact Me
+            <div>
+              <div className="mb-2 text-2xl font-bold md:text-3xl">
+                Contact Me
+              </div>
+              <div className="bg-orange-highlight h-1 w-12" />
             </div>
-            <div className="bg-orange-highlight mb-2 h-1 w-12" />
             <div>Email: brianngo2948 [at] gmail [dot] com</div>
             <div>LinkedIn: Brianngo9</div>
             <div>Instagram: Brian_Ngo9</div>
