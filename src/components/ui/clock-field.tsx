@@ -22,15 +22,22 @@ const ClockField = () => {
             className="w-full shrink-0"
             style={{ opacity: c.opacity }}
           >
-            <path
-              d={geo.d}
-              strokeWidth={3}
-              className="stroke-orange-highlight"
+            <g
               style={{
-                ["--clock-length" as string]: geo.length,
-                animation: `clock-draw ${c.drawMs}ms linear ${c.delayMs}ms forwards`,
+                ["--clock-shift" as string]: `${-geo.shift}px`,
+                animation: `clock-scroll ${c.scrollMs}ms linear ${geo.scrollDelayMs}ms infinite`,
               }}
-            />
+            >
+              <path
+                d={geo.d}
+                strokeWidth={3}
+                className="stroke-orange-highlight"
+                style={{
+                  ["--clock-length" as string]: geo.length,
+                  animation: `clock-draw ${c.drawMs}ms linear ${c.delayMs}ms forwards`,
+                }}
+              />
+            </g>
           </svg>
         );
       })}
