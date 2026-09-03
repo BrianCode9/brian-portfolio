@@ -31,8 +31,7 @@ export const projects: Project[] = [
   {
     title: "Simple 8-Bit CPU",
     slug: "simple-cpu",
-    description:
-      "CPE-271 (Digital Logic) final project using VHDL to design a CPU",
+    description: "8-bit CPU written in VHDL and run on a DE10-Lite FPGA",
     featured: true,
     wip: false,
     date: "2025-12",
@@ -41,7 +40,8 @@ export const projects: Project[] = [
   {
     title: "Custom Keyboard PCB",
     slug: "keyboard-pcb",
-    description: "",
+    description:
+      "Mechanical keyboard schematic and PCB layout designed in KiCad",
     featured: false,
     wip: true,
     image: "/images/projects/USBportkeyboardproject.png",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     title: "W65C02S Computer",
     slug: "6502-computer",
-    description: "",
+    description: "Homebrew computer built around the W65C02S microprocessor",
     featured: false,
     wip: true,
   },
@@ -65,8 +65,7 @@ export const projects: Project[] = [
   {
     title: "CMOS Inverter & Logic Circuit Design",
     slug: "cmos-inverter",
-    description:
-      "Designed, simulated, and optimized noise margins for a CMOS inverter and a clocked CMOS circuit",
+    description: "CMOS inverter and clocked logic circuit simulated in LTSpice",
     featured: true,
     wip: false,
     date: "2026-04",
