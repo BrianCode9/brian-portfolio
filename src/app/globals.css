@@ -44,16 +44,6 @@ html {
   }
 }
 
-/* --clock-shift is a whole number of periods, so the loop has no visible seam */
-@keyframes clock-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(var(--clock-shift));
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
