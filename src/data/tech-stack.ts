@@ -2,6 +2,8 @@
 export type TechIcon =
   | "typescript"
   | "python"
+  | "c"
+  | "cpp"
   | "react"
   | "nextjs"
   | "tailwind"
@@ -36,6 +38,8 @@ export const techStacks: TechStackGroup[] = [
     items: [
       { name: "TypeScript", icon: "typescript" },
       { name: "Python", icon: "python" },
+      { name: "C", icon: "c" },
+      { name: "C++", icon: "cpp" },
       { name: "React", icon: "react" },
       { name: "Next.js", icon: "nextjs" },
       { name: "Tailwind CSS", icon: "tailwind" },
