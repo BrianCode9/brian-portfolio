@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import AnimatedButton from "../ui/animatedbutton";
+import ProjectTags from "../ui/project-tags";
 import { projects } from "@/data/projects";
 
 const featured = projects.filter((p) => p.featured);
@@ -47,6 +48,7 @@ const ProjectSection = () => {
                   <p className="text-sm leading-relaxed text-gray-600 md:text-base">
                     {p.description}
                   </p>
+                  <ProjectTags tags={p.tags} />
                 </div>
                 <div className="text-orange-highlight mt-6 flex items-center text-sm font-semibold">
                   <span>{p.wip ? "In progress" : "View project"}</span>

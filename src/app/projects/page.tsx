@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import NavBar from "@/components/section/navbar";
+import ProjectTags from "@/components/ui/project-tags";
 
 export default function ProjectsPage() {
   return (
@@ -62,6 +63,7 @@ export default function ProjectsPage() {
                       <p className="text-sm leading-relaxed text-gray-600 md:text-base">
                         {p.description}
                       </p>
+                      <ProjectTags tags={p.tags} />
                     </div>
 
                     <div className="text-orange-highlight mt-6 flex items-center text-sm font-semibold">
