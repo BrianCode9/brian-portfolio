@@ -30,11 +30,9 @@ html {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-mozilla-headline);
-  --animate-clock-draw: clock-draw 2.5s ease-out forwards;
 }
 
-/* Draws the hero clock signal on from the left. --clock-length is the path
-   length in viewBox units, set on the element in hero-section.tsx. */
+/* --clock-length is the path length in viewBox units, set in clock-field.tsx */
 @keyframes clock-draw {
   from {
     stroke-dasharray: var(--clock-length);
@@ -43,6 +41,16 @@ html {
   to {
     stroke-dasharray: var(--clock-length);
     stroke-dashoffset: 0;
+  }
+}
+
+/* --clock-shift is a whole number of periods, so the loop has no visible seam */
+@keyframes clock-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--clock-shift));
   }
 }
 
