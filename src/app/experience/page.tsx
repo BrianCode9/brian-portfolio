@@ -21,36 +21,44 @@ export default function ExperiencePage() {
                 i !== experience.length - 1 ? "border-b border-gray-200" : ""
               }`}
             >
-              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-md border border-gray-200 bg-white sm:h-14 sm:w-14">
+              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-md border border-gray-200 bg-white p-1 sm:h-14 sm:w-14">
                 {entry.logo && (
                   <Image
                     src={entry.logo}
                     alt={`${entry.company} logo`}
                     width={56}
                     height={56}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 )}
               </div>
 
-              <div className="flex flex-1 flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <div>
-                  <h2 className="text-xl font-bold text-black">
-                    {entry.title}
-                  </h2>
-                  <p className="text-gray-600">
-                    {entry.company}
-                    {entry.type ? ` · ${entry.type}` : ""}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {entry.location}
-                    {entry.workplaceType ? ` · ${entry.workplaceType}` : ""}
-                  </p>
+              <div className="flex flex-1 flex-col gap-3">
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                  <div>
+                    <h2 className="text-xl font-bold text-black">
+                      {entry.title}
+                    </h2>
+                    <p className="text-gray-600">
+                      {entry.company}
+                      {entry.type ? ` · ${entry.type}` : ""}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      {entry.location}
+                      {entry.workplaceType ? ` · ${entry.workplaceType}` : ""}
+                    </p>
+                  </div>
+                  <div className="shrink-0 text-sm text-gray-500 sm:text-right">
+                    <p>{entry.dateRange}</p>
+                    <p>{entry.duration}</p>
+                  </div>
                 </div>
-                <div className="shrink-0 text-sm text-gray-500 sm:text-right">
-                  <p>{entry.dateRange}</p>
-                  <p>{entry.duration}</p>
-                </div>
+
+                {entry.description && (
+                  <p className="text-base leading-relaxed text-gray-600">
+                    {entry.description}
+                  </p>
+                )}
               </div>
             </div>
           ))}
