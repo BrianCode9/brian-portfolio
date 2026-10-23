@@ -2,7 +2,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import NavBar from "@/components/section/navbar";
-import { interests } from "@/data/interests";
 
 const TravelMap = dynamic(() => import("@/components/ui/TravelMap"), {
   ssr: false,
@@ -97,30 +96,6 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto w-full max-w-6xl px-6 pb-12">
           <TravelMap />
-        </div>
-      </div>
-
-      {/* Interests Section */}
-      <div className="bg-white">
-        <div className="mx-auto w-full max-w-5xl px-6 py-10 text-black">
-          <div className="mb-8">
-            <h2 className="mb-2 text-4xl font-bold md:text-5xl lg:text-6xl">
-              Interests
-            </h2>
-            <div className="bg-orange-highlight h-1 w-16" />
-          </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            {interests.map((interest) => (
-              <div key={interest.title}>
-                <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                  {interest.title}
-                </h3>
-                <p className="text-base leading-relaxed text-gray-600 md:text-lg">
-                  {interest.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </main>
