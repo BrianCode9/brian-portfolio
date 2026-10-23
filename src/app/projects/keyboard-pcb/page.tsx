@@ -29,7 +29,9 @@ export default function ProjectPage() {
         <section className="mb-12">
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Overview</h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Coming soon.
+            A custom mechanical keyboard PCB designed in KiCad, taken from
+            schematic capture through a fully routed board. The design covers
+            the switch matrix, the microcontroller, and USB-C power and signal.
           </p>
         </section>
 
@@ -37,9 +39,20 @@ export default function ProjectPage() {
           <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
             What I Did
           </h2>
-          <p className="text-base leading-relaxed text-gray-600">
-            Coming soon.
-          </p>
+          <ul className="list-inside list-disc space-y-2 text-base leading-relaxed text-gray-600">
+            <li>
+              Captured the switch matrix, microcontroller, and USB-C power and
+              signal schematic in KiCad.
+            </li>
+            <li>
+              Selected parts against electrical and footprint requirements.
+            </li>
+            <li>
+              Placed components and routed the board, including the USB
+              differential pair.
+            </li>
+            <li>Cleared the electrical rule and design rule checks.</li>
+          </ul>
         </section>
 
         <section className="mb-12">
@@ -47,7 +60,10 @@ export default function ProjectPage() {
             How It Works
           </h2>
           <p className="text-base leading-relaxed text-gray-600">
-            Coming soon.
+            The key switches are wired in a row and column matrix that the
+            microcontroller scans to detect key presses. The USB-C port powers
+            the board and carries the USB data lines to the microcontroller as a
+            routed differential pair.
           </p>
         </section>
 
@@ -55,9 +71,11 @@ export default function ProjectPage() {
           <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
             Built With
           </h2>
-          <p className="text-base leading-relaxed text-gray-600">
-            Coming soon.
-          </p>
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">
+              KiCad
+            </span>
+          </div>
         </section>
 
         <ProjectGallery
