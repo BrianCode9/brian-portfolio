@@ -32,6 +32,28 @@ html {
   --font-display: var(--font-mozilla-headline);
 }
 
+/* --clock-length is the path length in viewBox units, set in clock-field.tsx */
+@keyframes clock-draw {
+  from {
+    stroke-dasharray: var(--clock-length);
+    stroke-dashoffset: var(--clock-length);
+  }
+  to {
+    stroke-dasharray: var(--clock-length);
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --clock-shift is a whole number of periods, so the loop has no visible seam */
+@keyframes clock-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--clock-shift));
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

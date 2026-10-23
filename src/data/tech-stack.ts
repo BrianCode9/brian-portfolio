@@ -2,6 +2,8 @@
 export type TechIcon =
   | "typescript"
   | "python"
+  | "c"
+  | "cpp"
   | "react"
   | "nextjs"
   | "tailwind"
@@ -31,20 +33,6 @@ export interface TechStackGroup {
 
 export const techStacks: TechStackGroup[] = [
   {
-    id: "software",
-    title: "Software Engineering",
-    items: [
-      { name: "TypeScript", icon: "typescript" },
-      { name: "Python", icon: "python" },
-      { name: "React", icon: "react" },
-      { name: "Next.js", icon: "nextjs" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "PostgreSQL", icon: "postgresql" },
-      { name: "Prisma ORM", icon: "prisma" },
-      { name: "PocketBase", icon: "pocketbase" },
-    ],
-  },
-  {
     id: "hardware",
     title: "Hardware & Digital Design",
     items: [
@@ -57,6 +45,22 @@ export const techStacks: TechStackGroup[] = [
       { name: "LTSpice", icon: "ltspice" },
       { name: "QSpice", icon: "qspice" },
       { name: "MATLAB", icon: "matlab" },
+    ],
+  },
+  {
+    id: "software",
+    title: "Software Engineering",
+    items: [
+      { name: "TypeScript", icon: "typescript" },
+      { name: "Python", icon: "python" },
+      { name: "C", icon: "c" },
+      { name: "C++", icon: "cpp" },
+      { name: "React", icon: "react" },
+      { name: "Next.js", icon: "nextjs" },
+      { name: "Tailwind CSS", icon: "tailwind" },
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "Prisma ORM", icon: "prisma" },
+      { name: "PocketBase", icon: "pocketbase" },
     ],
   },
 ];

@@ -1,10 +1,13 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
+import ClockField from "@/components/ui/clock-field";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center bg-white px-6">
-      <div className="flex flex-col items-center gap-5 text-center">
+    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-white px-6">
+      <ClockField />
+
+      <div className="relative z-10 flex flex-col items-center gap-5 text-center">
         <p className="text-sm tracking-[0.3em] text-gray-600 uppercase md:text-base">
           Hello, I&apos;m
         </p>
@@ -18,6 +21,10 @@ const HeroSection = () => {
           </span>
           <span className="bg-orange-highlight absolute bottom-0 left-0 h-[4px] w-full" />
         </div>
+
+        <p className="text-lg tracking-wide text-gray-600 md:text-xl">
+          ECE Student at WVU
+        </p>
       </div>
 
       <a

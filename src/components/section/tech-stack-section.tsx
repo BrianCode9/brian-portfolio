@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  SiC,
+  SiCplusplus,
   SiIntel,
   SiKicad,
   SiNextdotjs,
@@ -29,6 +31,8 @@ const icons: Record<
 > = {
   typescript: SiTypescript,
   python: SiPython,
+  c: SiC,
+  cpp: SiCplusplus,
   react: SiReact,
   nextjs: SiNextdotjs,
   tailwind: SiTailwindcss,

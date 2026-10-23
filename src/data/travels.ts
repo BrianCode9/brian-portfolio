@@ -1,4 +1,4 @@
-export type TravelCategory = "home" | "origin" | "hackathon" | "travel";
+export type TravelCategory = "home" | "hackathon" | "travel";
 
 export interface TravelPlace {
   name: string;
@@ -11,14 +11,12 @@ export interface TravelPlace {
 
 export const categoryColors: Record<TravelCategory, string> = {
   home: "#01579B",
-  origin: "#0288D1",
   hackathon: "#FF5733",
   travel: "#C17D0A",
 };
 
 export const categoryLabels: Record<TravelCategory, string> = {
   home: "Home / School",
-  origin: "Where I'm From",
   hackathon: "Hackathon",
   travel: "Travel",
 };
@@ -44,15 +42,6 @@ export const travelPlaces: TravelPlace[] = [
     lat: 39.2864787,
     lng: -80.2561981,
     category: "home",
-  },
-
-  // Origin
-  {
-    name: "Flint, MI",
-    lat: 43.0125274,
-    lng: -83.6874562,
-    category: "origin",
-    description: "Where I was born",
   },
 
   // Hackathons
@@ -108,6 +97,10 @@ export const travelPlaces: TravelPlace[] = [
 
   // Travel
   { name: "Philadelphia, PA", lat: 39.9526, lng: -75.1652, category: "travel" },
+  { name: "Pittsburgh, PA", lat: 40.4406, lng: -79.9959, category: "travel" },
+  { name: "Seattle, WA", lat: 47.6062, lng: -122.3321, category: "travel" },
+  { name: "Phoenix, AZ", lat: 33.4484, lng: -112.074, category: "travel" },
+  { name: "Canton, OH", lat: 40.7989, lng: -81.3784, category: "travel" },
   {
     name: "New York City",
     lat: 40.7127753,
@@ -136,6 +129,18 @@ export const travelPlaces: TravelPlace[] = [
     name: "Deep Creek Lake, MD",
     lat: 39.5116824,
     lng: -79.3155716,
+    category: "travel",
+  },
+  {
+    name: "Grand Rapids, MI",
+    lat: 42.9632425,
+    lng: -85.6678639,
+    category: "travel",
+  },
+  {
+    name: "Roanoke, VA",
+    lat: 37.2709704,
+    lng: -79.9414266,
     category: "travel",
   },
   {
