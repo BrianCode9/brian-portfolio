@@ -33,6 +33,21 @@ export interface TechStackGroup {
 
 export const techStacks: TechStackGroup[] = [
   {
+    id: "hardware",
+    title: "Hardware & Digital Design",
+    items: [
+      { name: "VHDL", icon: "vhdl" },
+      { name: "Assembly", icon: "assembly" },
+      { name: "MIPS", icon: "mips" },
+      { name: "Quartus Prime Lite", icon: "quartus" },
+      { name: "DE10-Lite FPGA", icon: "fpga" },
+      { name: "KiCad", icon: "kicad" },
+      { name: "LTSpice", icon: "ltspice" },
+      { name: "QSpice", icon: "qspice" },
+      { name: "MATLAB", icon: "matlab" },
+    ],
+  },
+  {
     id: "software",
     title: "Software Engineering",
     items: [
@@ -46,21 +61,6 @@ export const techStacks: TechStackGroup[] = [
       { name: "PostgreSQL", icon: "postgresql" },
       { name: "Prisma ORM", icon: "prisma" },
       { name: "PocketBase", icon: "pocketbase" },
-    ],
-  },
-  {
-    id: "hardware",
-    title: "Hardware & Digital Design",
-    items: [
-      { name: "VHDL", icon: "vhdl" },
-      { name: "Assembly", icon: "assembly" },
-      { name: "MIPS", icon: "mips" },
-      { name: "Quartus Prime Lite", icon: "quartus" },
-      { name: "DE10-Lite FPGA", icon: "fpga" },
-      { name: "KiCad", icon: "kicad" },
-      { name: "LTSpice", icon: "ltspice" },
-      { name: "QSpice", icon: "qspice" },
-      { name: "MATLAB", icon: "matlab" },
     ],
   },
 ];
