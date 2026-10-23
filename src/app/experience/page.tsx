@@ -54,10 +54,12 @@ export default function ExperiencePage() {
                   </div>
                 </div>
 
-                {entry.description && (
-                  <p className="text-base leading-relaxed text-gray-600">
-                    {entry.description}
-                  </p>
+                {entry.bullets && entry.bullets.length > 0 && (
+                  <ul className="list-disc space-y-1 pl-5 text-base leading-relaxed text-gray-600">
+                    {entry.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
                 )}
               </div>
             </div>
