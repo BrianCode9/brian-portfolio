@@ -17,12 +17,12 @@ const AboutSection = () => {
             </div>
             <div className="space-y-4 text-lg text-white md:text-xl">
               <p>
-                I&apos;m a computer and electrical engineering dual degree
-                student at West Virginia University. Right now I&apos;m a
-                Software Engineer Intern at WVU&apos;s Cyber-Resilience Resource
-                Center, building a cybersecurity compliance platform, and I TA
-                the digital logic lab. In my free time, I enjoy starting
-                projects, cooking, and traveling.
+                I&apos;m an electrical and computer engineering dual degree
+                student at West Virginia University. Right now I TA the digital
+                logic lab, and this past summer I was a Software Engineer Intern
+                at WVU&apos;s Cyber-Resilience Resource Center, building a
+                cybersecurity compliance platform. In my free time, I enjoy
+                starting projects, cooking, and traveling.
               </p>
             </div>
             <div>

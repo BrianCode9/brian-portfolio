@@ -53,7 +53,7 @@ export default function AboutPage() {
                 computer science class, AP CSA, which gave me a foundation in
                 Java. My positive experience with the subject led me to major in
                 engineering at WVU, where I am now working on a dual degree in
-                Computer Engineering and Electrical Engineering.
+                Electrical Engineering and Computer Engineering.
               </p>
             </div>
           </div>
