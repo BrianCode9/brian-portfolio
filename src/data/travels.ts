@@ -97,6 +97,10 @@ export const travelPlaces: TravelPlace[] = [
 
   // Travel
   { name: "Philadelphia, PA", lat: 39.9526, lng: -75.1652, category: "travel" },
+  { name: "Pittsburgh, PA", lat: 40.4406, lng: -79.9959, category: "travel" },
+  { name: "Seattle, WA", lat: 47.6062, lng: -122.3321, category: "travel" },
+  { name: "Phoenix, AZ", lat: 33.4484, lng: -112.074, category: "travel" },
+  { name: "Canton, OH", lat: 40.7989, lng: -81.3784, category: "travel" },
   {
     name: "New York City",
     lat: 40.7127753,
