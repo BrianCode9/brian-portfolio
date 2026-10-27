@@ -35,13 +35,11 @@ export default function AboutPage() {
                 <div className="bg-orange-highlight h-1 w-16" />
               </div>
               <p>
-                My story starts in Michigan, where I learned how to walk and
-                speak my first language (Vietnamese). After about five years my
+                My story starts in Michigan, where I was born. After about five years my
                 family and I moved to West Virginia, where I did most of my
-                growing up. I went to Notre Dame High School in Clarksburg,
-                where I participated in a ton of sports and clubs. My favorite
-                sport was swimming, and now I am able to share that interest as
-                a coach.
+                growing up. My favorite sport as a kid was swimming, which
+                I participated in all throughout high school and also started to share
+                that interest as a coach for a local team.
               </p>
               <p>
                 High school is also where I got my start with
@@ -50,7 +48,7 @@ export default function AboutPage() {
                 few YouTube videos about engineering. One of my first projects
                 was recreating Pong using the Pygame library. After learning the
                 basics of Python, I decided to move on and take an online
-                computer science class, AP CSA, which gave me a foundation in
+                computer science class my senior year, AP CSA, which gave me a foundation in
                 Java. My positive experience with the subject led me to major in
                 engineering at WVU, where I am now working on a dual degree in
                 Electrical Engineering and Computer Engineering.
@@ -89,7 +87,7 @@ export default function AboutPage() {
               Development Club at WVU (SoftwareWVU), the President of SASE
               (Society of Asian Scientists and Engineers), and a Statler
               Ambassador. My future plans include going to graduate school for
-              electrical engineering and working towards becoming a hardware
+              electrical engineering and working towards becoming a VLSI or FPGA
               engineer.
             </p>
           </div>
