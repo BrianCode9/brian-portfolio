@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedButton from "../ui/animatedbutton";
+import { currently } from "@/data/currently";
 
 const AboutSection = () => {
   return (
@@ -25,6 +26,18 @@ const AboutSection = () => {
                 starting projects, cooking, and traveling.
               </p>
             </div>
+            {currently.length > 0 && (
+              <div className="border-orange-highlight border-l-4 pl-4">
+                <p className="text-orange-highlight mb-1 text-sm font-semibold tracking-[0.2em] uppercase">
+                  Currently
+                </p>
+                <ul className="space-y-1 text-base text-white md:text-lg">
+                  {currently.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div>
               <Link href={"/about"}>
                 <AnimatedButton variant="teal">More</AnimatedButton>
