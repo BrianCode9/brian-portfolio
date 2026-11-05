@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
+import MotionProvider from "@/components/ui/motion-provider";
 import "./globals.css";
 
 const roboto = Roboto_Condensed({
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>{children}</body>
+      <body className={`${roboto.variable} antialiased`}>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }
