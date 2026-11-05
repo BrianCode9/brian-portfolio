@@ -13,58 +13,69 @@ export default function ExperiencePage() {
         </h1>
         <div className="bg-orange-highlight mb-10 h-1 w-16" />
 
-        <div className="flex flex-col">
-          {experience.map((entry, i) => (
-            <div
-              key={`${entry.company}-${entry.title}`}
-              className={`flex gap-4 py-6 ${
-                i !== experience.length - 1 ? "border-b border-gray-200" : ""
-              }`}
-            >
-              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-md border border-gray-200 bg-white p-1 sm:h-14 sm:w-14">
-                {entry.logo && (
-                  <Image
-                    src={entry.logo}
-                    alt={`${entry.company} logo`}
-                    width={56}
-                    height={56}
-                    className="h-full w-full object-contain"
-                  />
-                )}
-              </div>
+        <ol className="flex flex-col">
+          {experience.map((entry, i) => {
+            const isLast = i === experience.length - 1;
+            const isCurrent = entry.dateRange.includes("Present");
 
-              <div className="flex flex-1 flex-col gap-3">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <div>
-                    <h2 className="text-xl font-bold text-black">
-                      {entry.title}
-                    </h2>
-                    <p className="text-gray-600">
-                      {entry.company}
-                      {entry.type ? ` · ${entry.type}` : ""}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {entry.location}
-                      {entry.workplaceType ? ` · ${entry.workplaceType}` : ""}
-                    </p>
+            return (
+              <li
+                key={`${entry.company}-${entry.title}`}
+                className="group relative flex gap-4 sm:gap-6"
+              >
+                {/* Timeline rail: the logo is the node, the line runs to the next one */}
+                <div className="relative flex shrink-0 flex-col items-center">
+                  <div
+                    className={`relative z-10 h-12 w-12 overflow-hidden rounded-full border-2 bg-white p-1.5 transition-colors duration-200 sm:h-14 sm:w-14 ${
+                      isCurrent ? "border-orange-highlight" : "border-suit-teal"
+                    }`}
+                  >
+                    {entry.logo && (
+                      <Image
+                        src={entry.logo}
+                        alt={`${entry.company} logo`}
+                        width={56}
+                        height={56}
+                        className="h-full w-full rounded-full object-contain"
+                      />
+                    )}
                   </div>
-                  <div className="shrink-0 text-sm text-gray-500 sm:text-right">
-                    <p>{entry.dateRange}</p>
-                    <p>{entry.duration}</p>
-                  </div>
+                  {!isLast && <div className="bg-suit-teal/25 w-0.5 flex-1" />}
                 </div>
 
-                {entry.bullets && entry.bullets.length > 0 && (
-                  <ul className="list-disc space-y-1 pl-5 text-base leading-relaxed text-gray-600">
-                    {entry.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+                <div className={`flex-1 ${isLast ? "" : "pb-10"}`}>
+                  <div className="flex flex-col gap-1 rounded-md px-4 py-3 transition-colors duration-200 group-hover:bg-gray-100 sm:flex-row sm:items-baseline sm:justify-between">
+                    <div>
+                      <h2 className="text-xl font-bold text-black">
+                        {entry.title}
+                      </h2>
+                      <p className="text-gray-600">
+                        {entry.company}
+                        {entry.type ? ` · ${entry.type}` : ""}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {entry.location}
+                        {entry.workplaceType ? ` · ${entry.workplaceType}` : ""}
+                      </p>
+                    </div>
+                    <div className="shrink-0 text-sm text-gray-500 sm:text-right">
+                      <p>{entry.dateRange}</p>
+                      <p>{entry.duration}</p>
+                    </div>
+                  </div>
+
+                  {entry.bullets && entry.bullets.length > 0 && (
+                    <ul className="mt-2 list-disc space-y-1 pr-4 pl-9 text-base leading-relaxed text-gray-600">
+                      {entry.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </main>
   );
