@@ -1,3 +1,12 @@
+// Filter chips on the projects page, in display order.
+export const projectCategories = [
+  "Digital Design",
+  "Circuits & PCB",
+  "Software",
+] as const;
+
+export type ProjectCategory = (typeof projectCategories)[number];
+
 export interface Project {
   title: string;
   slug: string;
@@ -8,12 +17,14 @@ export interface Project {
   image?: string;
   // Tools and software, most representative first. Cards show the first few.
   tags?: string[];
+  categories: ProjectCategory[];
 }
 
 export const projects: Project[] = [
   {
     title: "Budget Flow",
     slug: "budget-flow",
+    categories: ["Software"],
     tags: [
       "Next.js",
       "TypeScript",
@@ -33,6 +44,7 @@ export const projects: Project[] = [
   {
     title: "Backyard Blackjack",
     slug: "backyard-blackjack",
+    categories: ["Software"],
     tags: ["Next.js", "TypeScript", "React", "PocketBase", "Tailwind CSS"],
     description:
       "Blackjack game built at SteelHacks (University of Pittsburgh)",
@@ -44,6 +56,7 @@ export const projects: Project[] = [
   {
     title: "Simple 8-Bit CPU",
     slug: "simple-cpu",
+    categories: ["Digital Design"],
     tags: ["VHDL", "Quartus Prime Lite", "DE10-Lite"],
     description: "8-bit CPU written in VHDL and run on a DE10-Lite FPGA",
     featured: true,
@@ -54,6 +67,7 @@ export const projects: Project[] = [
   {
     title: "Custom Keyboard PCB",
     slug: "keyboard-pcb",
+    categories: ["Circuits & PCB"],
     tags: ["KiCad"],
     description:
       "Mechanical keyboard schematic and PCB layout designed in KiCad",
@@ -64,6 +78,7 @@ export const projects: Project[] = [
   {
     title: "RISC-V Processor",
     slug: "risc-v-processor",
+    categories: ["Digital Design"],
     tags: ["RISC-V"],
     description: "Processor core that implements the RISC-V instruction set",
     featured: false,
@@ -72,6 +87,7 @@ export const projects: Project[] = [
   {
     title: "Personal Website",
     slug: "personal-website",
+    categories: ["Software"],
     tags: [
       "Next.js",
       "TypeScript",
@@ -89,6 +105,7 @@ export const projects: Project[] = [
   {
     title: "CMOS Inverter & Logic Circuit Design",
     slug: "cmos-inverter",
+    categories: ["Circuits & PCB"],
     tags: ["LTSpice", "Excel"],
     description: "CMOS inverter and clocked logic circuit simulated in LTSpice",
     featured: true,

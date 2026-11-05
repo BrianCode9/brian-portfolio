@@ -1,4 +1,4 @@
-// Geometry and netlist for the hero's full adder schematic.
+// Geometry and netlist for the interactive full adder on the Simple CPU page.
 //   S    = A xor B xor Cin
 //   Cout = (A and B) or (Cin and (A xor B))
 // Gates are 48 wide and 52 tall, drawn from their top-left corner. Input pins
