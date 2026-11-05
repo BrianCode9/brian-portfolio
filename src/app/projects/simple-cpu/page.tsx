@@ -2,7 +2,6 @@ import Link from "next/link";
 import NavBar from "@/components/section/navbar";
 import AnimatedButton from "@/components/ui/animatedbutton";
 import ProjectGallery from "@/components/ui/project-gallery";
-import FullAdder from "@/components/ui/full-adder";
 import cpuDiagramImg from "../../../../public/images/projects/cpu-diagram.png";
 import fsmImg from "../../../../public/images/projects/finite-state-machine.jpeg";
 import waveSimImg from "../../../../public/images/projects/cpu-wave-simulation.png";
@@ -96,14 +95,6 @@ export default function ProjectPage() {
             addition. STOREA stores the value of the accumulator into memory at
             a specified address.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-gray-600">
-            At the gate level, each bit of an ADDA comes down to a full adder
-            like the one below. Flip the inputs to watch the signals settle
-            through each stage of logic.
-          </p>
-          <div className="mt-6 rounded-md border border-gray-200 p-4 sm:p-6">
-            <FullAdder />
-          </div>
         </section>
 
         <section className="mb-12">
