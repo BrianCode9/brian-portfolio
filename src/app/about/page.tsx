@@ -35,11 +35,11 @@ export default function AboutPage() {
                 <div className="bg-orange-highlight h-1 w-16" />
               </div>
               <p>
-                My story starts in Michigan, where I was born. After about five years my
-                family and I moved to West Virginia, where I did most of my
-                growing up. My favorite sport as a kid was swimming, which
-                I participated in all throughout high school and also started to share
-                that interest as a coach for a local team.
+                My story starts in Michigan, where I was born. After about five
+                years my family and I moved to West Virginia, where I did most
+                of my growing up. My favorite sport as a kid was swimming, which
+                I participated in all throughout high school and also started to
+                share that interest as a coach for a local team.
               </p>
               <p>
                 High school is also where I got my start with
@@ -48,10 +48,10 @@ export default function AboutPage() {
                 few YouTube videos about engineering. One of my first projects
                 was recreating Pong using the Pygame library. After learning the
                 basics of Python, I decided to move on and take an online
-                computer science class my senior year, AP CSA, which gave me a foundation in
-                Java. My positive experience with the subject led me to major in
-                engineering at WVU, where I am now working on a dual degree in
-                Electrical Engineering and Computer Engineering.
+                computer science class my senior year, AP CSA, which gave me a
+                foundation in Java. My positive experience with the subject led
+                me to major in engineering at WVU, where I am now working on a
+                dual degree in Electrical Engineering and Computer Engineering.
               </p>
             </div>
           </div>
